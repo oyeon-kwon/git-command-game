@@ -1,0 +1,65 @@
+.remote {
+    height: 15rem;
+    margin: 1rem;
+}
+
+.small_title {
+    background-color: #4000c7;
+    color: white;
+    width: 2rem;
+}
+
+.pair {
+    border: 1px solid #4000c7;
+    height: 7.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.origin {
+    border: 1px solid #4000c7;
+    height: 7.5rem;
+}
+
+.local {
+    border: 1px solid #4000c7;
+    height: 20rem;
+    margin: 1rem;
+}
+
+.commit {
+    border: 1px dashed gray;
+    height: 7rem;
+}
+
+.layout {
+    display: flex;
+}
+
+.left {
+    flex: 0 1 auto;
+}
+
+.right {
+    flex: 0 1 auto;
+}
+
+.staging {
+    border: 1px solid #000000;
+    width: 50rem;
+    height: 5rem;
+    margin: 1rem;
+}
+
+.untracked {
+    border: 1px solid #000000;
+    width: 50rem;
+    height: 5rem;
+    margin: 1rem;
+}
+
+.stash {
+    border: 1px solid #000000;
+    width: 50rem;
+    height: 11rem;
+    margin: 1rem;
+}

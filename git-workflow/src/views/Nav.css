@@ -1,0 +1,14 @@
+.nav {
+    background-color: #3f00c73a;
+}
+
+.nav_title {
+    padding: 1.4rem;
+}
+
+.back {
+    background-color: #4000c7;
+    color: #ffffff;
+    border-radius: 2rem;
+    width: 4rem;
+}
