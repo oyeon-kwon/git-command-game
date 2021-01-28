@@ -1,0 +1,38 @@
+[
+    {
+        "chapter": "1. 혼자 작업",
+        "number": 1,
+        "description": "# 김코딩이는 fork한 codestates 깃헙 리파지토리를 본인의 local에서 작업하려고 합니다.",
+        "answer": "git clone"
+    },
+    {
+        "chapter": "1. 혼자 작업",
+        "number": 2,
+        "description": "# local working directory에서 index.html 파일을 추가했습니다. 기존과 변경된 파일들이 어떤 것이 있는지 확인해 보려고 합니다.",
+        "answer": "git status"
+    },
+    {
+        "chapter": "1. 혼자 작업",
+        "number": 3,
+        "description": "# local 의 index.html 파일을 staging area로 옮기려고 합니다.",
+        "answer": "git add index.html"
+    },
+    {
+        "chapter": "1. 혼자 작업",
+        "number": 4,
+        "description": "# 내 깃헙 리파지토리에 'first commit' 이라고 커밋 기록을 남기려고 합니다.",
+        "answer": "git commit -m 'first commit'"
+    },
+    {
+        "chapter": "1. 혼자 작업",
+        "number": 5,
+        "description": "# 내 깃헙 origin 리파지토리의 main으로 푸쉬합니다.",
+        "answer": "git push origin main"
+    },
+    {
+        "chapter": "1. 혼자 작업",
+        "number": 6,
+        "description": "# 내 커밋 로그를 확인해볼까요?",
+        "answer": "git log"
+    }
+]

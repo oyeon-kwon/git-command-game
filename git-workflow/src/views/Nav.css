@@ -4,6 +4,7 @@
 
 .nav_title {
     padding: 1.4rem;
+    text-align: center;
 }
 
 .back {
@@ -11,4 +12,10 @@
     color: #ffffff;
     border-radius: 2rem;
     width: 4rem;
+    padding: 2px;
+    margin-left: 10px;
+}
+
+.score {
+    text-align: right;
 }
