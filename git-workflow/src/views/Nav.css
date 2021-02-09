@@ -1,21 +1,28 @@
 .nav {
-    background-color: #3f00c73a;
+  background-color: #4c56a1;
+  color: white;
 }
 
 .nav_title {
-    padding: 1.4rem;
-    text-align: center;
+  padding: 1.4rem;
+  text-align: center;
 }
 
-.back {
-    background-color: #4000c7;
-    color: #ffffff;
-    border-radius: 2rem;
-    width: 4rem;
-    padding: 2px;
-    margin-left: 10px;
+.back_btn {
+  background-color: #c5caec;
+  color: #4c56a1;
+  border-radius: 2rem;
+  width: 4rem;
+  padding: 2px;
+  margin-left: 10px;
+  border: 0;
+  outline: 0;
+  height: 1.5rem;
+  text-align: center;
+  align-items: center;
 }
 
-.score {
-    text-align: right;
+.back_btn:hover {
+  background-color: #4000c7;
+  color: white;
 }

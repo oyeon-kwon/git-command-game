@@ -1,65 +1,119 @@
-.remote {
-    height: 15rem;
-    margin: 1rem;
+.visual_sub_title {
+  background-color: #4000c7;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  width: 7rem;
+  margin-bottom: 0.2rem;
+  border-radius: 7px 0 0 0;
 }
 
-.small_title {
-    background-color: #4000c7;
-    color: white;
-    width: 2rem;
+.visual_third_title {
+  background-color: #c5caec;
+  display: inline-block;
+  width: 100%;
+}
+
+.remote {
+  height: 15rem;
+  margin: 1rem;
+  border: 1px solid #4000c7;
+  border-radius: 8px;
 }
 
 .pair {
-    border: 1px solid #4000c7;
-    height: 7.5rem;
-    margin-bottom: 0.3rem;
+  border: 1px solid #c5caec;
+  display: inline-block;
+  width: 97%;
+  height: 43%;
+  margin-bottom: 0.3rem;
+  margin-left: 1rem;
 }
 
 .origin {
-    border: 1px solid #4000c7;
-    height: 7.5rem;
+  border: 1px solid #c5caec;
+  display: inline-block;
+  width: 97%;
+  height: 43%;
+  margin-left: 1rem;
 }
 
 .local {
-    border: 1px solid #4000c7;
-    height: 20rem;
-    margin: 1rem;
+  border: 1px solid #4000c7;
+  height: 20rem;
+  margin: 1rem;
+  border-radius: 8px;
 }
 
 .commit {
-    border: 1px dashed gray;
-    height: 7rem;
+  height: 7rem;
 }
 
 .layout {
-    display: flex;
+  display: flex;
 }
 
 .left {
-    flex: 0 1 auto;
+  flex: 0 1 auto;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: 1rem;
 }
 
 .right {
-    flex: 0 1 auto;
+  flex: 0 1 auto;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .staging {
-    border: 1px solid #000000;
-    width: 50rem;
-    height: 5rem;
-    margin: 1rem;
+  border: 1px solid #c5caec;
+  height: 5rem;
+  margin-bottom: 0.1rem;
 }
 
 .untracked {
-    border: 1px solid #000000;
-    width: 50rem;
-    height: 5rem;
-    margin: 1rem;
+  border: 1px solid #c5caec;
+  height: 5rem;
+}
+
+.file {
+  color: crimson;
 }
 
 .stash {
-    border: 1px solid #000000;
-    width: 430px;
-    height: 11rem;
-    margin: 1rem;
+  border: 1px solid #c5caec;
+  height: 10.2rem;
 }
+
+.github_logo {
+  margin-left: 47%;
+  margin-top: 15%;
+}
+
+svg {
+  margin-left: 10%;
+}
+
+.show_commit {
+  animation: boxFade 1s linear alternate;
+}
+
+@keyframes boxFade {
+  0% {
+   opacity: 0;
+  }
+  100% {
+   opacity: 1;
+  }
+ }
+
+ .push_commit {
+   margin-left: 14%;
+   margin-top: 2%;
+ }
