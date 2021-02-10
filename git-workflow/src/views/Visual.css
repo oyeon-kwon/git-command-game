@@ -97,7 +97,7 @@
 }
 
 svg {
-  margin-left: 10%;
+  margin-left: 50px;
 }
 
 .show_commit {
@@ -114,6 +114,6 @@ svg {
  }
 
  .push_commit {
-   margin-left: 14%;
-   margin-top: 2%;
+   margin-left: 85px;
+   margin-top: 10px;
  }

@@ -21,7 +21,7 @@
         "chapter": "1. 혼자 작업",
         "number": 4,
         "description": "# 내 깃헙 리파지토리에 'first commit' 이라고 커밋 기록을 남기려고 합니다.",
-        "answer": ["git commit -m 'first commit'"]
+        "answer": "git commit -m 'first commit'"
     },
     {
         "chapter": "1. 혼자 작업",
