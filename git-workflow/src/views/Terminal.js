@@ -6,6 +6,7 @@ import Modal_F from './Modal_F';
 
 function Terminal(props) {
 
+  const currentChapter =  Number(props.currentChapter)
   const currentStep = Number(props.currentStep)
   
   let inputValue = ''
@@ -56,7 +57,7 @@ function Terminal(props) {
         <input onChange={inputHandler} onKeyPress={onEnterPress} className='input' autoFocus></input>
         <button onClick={moveNextStep} className='enter_btn'>Enter</button>
       </div>
-      <Modal_T className='modal_t' currentStep={currentStep}/>
+      <Modal_T className='modal_t' currentChapter={currentChapter} currentStep={currentStep}/>
       <Modal_F className='modal_f'/>
     </div>
   );

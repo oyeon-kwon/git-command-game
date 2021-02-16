@@ -5,10 +5,11 @@ import questions from '../questions.json';
 function Nav(props) {
   // App.js에서 상태 받아 와서 점수 구현 필요
 
+  const currentChapter =  Number(props.currentChapter)
   const currentStep = Number(props.currentStep)
 
   const backHandler = () => {
-    window.location.href = `http://localhost:3000/chapter1/${currentStep - 1}`
+    window.location.href = `http://localhost:3000/chapter${currentChapter}/${currentStep - 1}`
 
     if(currentStep === 1){
       window.location.href = 'http://localhost:3000/'

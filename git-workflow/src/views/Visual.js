@@ -1,14 +1,24 @@
 import React from 'react';
 import './Visual.css';
-import githubLogo from '../github.png';
+// import githubLogo from '../github.png';
+import Ch1 from '../chapters/Ch1';
+import Ch2 from '../chapters/Ch2';
 
 function Visual(props) {
 
+  const currentChapter =  Number(props.currentChapter)
   const currentStep = Number(props.currentStep)
 
   return (
     <>
-      {
+    {
+      currentChapter === 1 ?
+        <Ch1 currentStep={currentStep} />
+      : currentChapter === 2 ?
+        <Ch2 currentStep={currentStep} />
+      : null
+    }
+      {/* {
         currentStep === 1 ? 
         <>
           <img src={githubLogo} className='github_logo' alt='git'></img>
@@ -185,7 +195,7 @@ function Visual(props) {
             </div>
           </div>
         </> : null
-      }
+      } */}
     </>
   );
 }

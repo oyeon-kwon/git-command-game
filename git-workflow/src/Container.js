@@ -7,13 +7,13 @@ import './Container.css';
 
 function Container() {
 
-  let { number } = useParams();
+  let { chapter, number } = useParams();
 
   return (
     <div className="container">
-      <Nav currentStep={number}/>
-      <Visual currentStep={number}/>
-      <Terminal currentStep={number}/>
+      <Nav currentChapter={chapter} currentStep={number}/>
+      <Visual currentChapter={chapter} currentStep={number}/>
+      <Terminal currentChapter={chapter} currentStep={number}/>
     </div>
   )
 }

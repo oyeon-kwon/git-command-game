@@ -17,7 +17,7 @@ function App() {
         <Route exact path="/">
           <Start />
         </Route>
-        <Route path={`/chapter1/:number`} container={<Container />}>
+        <Route path={`/chapter:chapter/:number`} container={<Container />}>
           <Container />
         </Route>
         <Route exact path="/end">

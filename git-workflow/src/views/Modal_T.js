@@ -3,7 +3,8 @@ import './Modal_T.css';
 import questions from '../questions.json';
 
 function Modal_T (props) {
-
+  
+  const currentChapter =  Number(props.currentChapter)
   const currentStep = props.currentStep
 
   const continueHandler = () => {
@@ -12,7 +13,7 @@ function Modal_T (props) {
     if(currentStep === questions.length) {
       window.location.href = 'http://localhost:3000/end'
     } else {
-      window.location.href = `http://localhost:3000/chapter1/${currentStep + 1}`
+      window.location.href = `http://localhost:3000/chapter${currentChapter}/${currentStep + 1}`
     }
   }
 
