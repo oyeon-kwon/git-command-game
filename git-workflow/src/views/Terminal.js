@@ -1,7 +1,8 @@
 import React from 'react';
 import './Terminal.css';
 import questions from '../questions.json';
-import Modal from './Modal';
+import Modal_T from './Modal_T';
+import Modal_F from './Modal_F';
 
 function Terminal(props) {
 
@@ -12,10 +13,10 @@ function Terminal(props) {
   const moveNextStep = () => {
     if(questions[currentStep - 1].answer.indexOf(inputValue) === -1){
       wrongAnswerHandler()
-    } else if(currentStep === questions.length) {
-      window.location.href = 'http://localhost:3000/end'
     } else {
-      window.location.href = `http://localhost:3000/chapter1/${currentStep + 1}`
+      rightAnswerHandler()
+      let terminal_guide = document.querySelector('.terminal_guide')
+      terminal_guide.innerText = questions[currentStep - 1].terminal_guide
     }
   }
   
@@ -29,8 +30,13 @@ function Terminal(props) {
     }
   }
 
+  const rightAnswerHandler = () => {
+    let modal = document.querySelector('.modal_t')
+    modal.style.display = 'block';
+  }
+
   const wrongAnswerHandler = () => {
-    let modal = document.querySelector('.modal')
+    let modal = document.querySelector('.modal_f')
     modal.style.display = 'block';
   }
 
@@ -45,11 +51,13 @@ function Terminal(props) {
         <div className='bar_description'>질문 {currentStep}</div>
       </div>
       <div className='question_description'>{questions[currentStep - 1].description}</div>
+      <div className='terminal_guide'></div>
       <div className='input_line'>
         <input onChange={inputHandler} onKeyPress={onEnterPress} className='input' autoFocus></input>
         <button onClick={moveNextStep} className='enter_btn'>Enter</button>
       </div>
-      <Modal className='modal'/>
+      <Modal_T className='modal_t' currentStep={currentStep}/>
+      <Modal_F className='modal_f'/>
     </div>
   );
 }

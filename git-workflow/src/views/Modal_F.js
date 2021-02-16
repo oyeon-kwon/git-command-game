@@ -1,16 +1,16 @@
 import React from 'react';
-import './Modal.css';
+import './Modal_F.css';
 
-function Modal() {
+function Modal_F() {
 
   const retryHandler = () => {
-    let modal = document.querySelector('.modal');
+    let modal = document.querySelector('.modal_f');
     modal.style.display = 'none';
   }
 
   return (
     <>
-      <div className='modal'>
+      <div className='modal_f'>
         <div className='modal_content'>
           <span className='close' onClick={retryHandler}>&times;</span>
           <div className='modal_description'>
@@ -24,4 +24,4 @@ function Modal() {
   )
 }
 
-export default Modal;
+export default Modal_F;
