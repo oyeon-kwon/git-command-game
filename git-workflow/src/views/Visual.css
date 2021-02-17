@@ -1,3 +1,8 @@
+.visual_container {
+  width: 1200px;
+  height: 560px;
+}
+
 .visual_sub_title {
   background-color: #4000c7;
   color: white;
@@ -23,7 +28,7 @@
 
 .pair {
   border: 1px solid #c5caec;
-  width: 1150px;
+  width: 98%;
   height: 100px;
   margin-bottom: 4px;
   margin-left: 10px;
@@ -32,7 +37,7 @@
 
 .origin {
   border: 1px solid #c5caec;
-  width: 1150px;
+  width: 98%;
   height: 100px;
   margin-left: 10px;
   margin-right: 10px;
@@ -107,12 +112,12 @@ svg {
 
 .ch1_4 {
   position: fixed;
-  margin-top: 310px;
+  margin-top: 295px;
 }
 
 .ch1_5 {
   position: fixed;
-  margin-top: 310px;
+  margin-top: 295px;
 }
 
 @keyframes boxFade {

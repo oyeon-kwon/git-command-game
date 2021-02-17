@@ -3,7 +3,8 @@
 .terminal {
   border-radius: 8px;
   background-color: rgb(206, 206, 206);
-  height: 280px;
+  /* width: 1180px; */
+  height: 250px;
   margin: 10px;
   bottom: 0;
   overflow: scroll;
@@ -60,15 +61,17 @@
 .terminal_guide {
   width: 1150px;
   color:rgb(68, 179, 63);
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 20px;
-  margin: 20px;
+  margin-right: 20px;
+  overflow: scroll;
 }
 
 .input_line {
   width: 1350px;
   position: fixed;
-  top: 875px
+  display: flex;
+  bottom: 2rem;
 }
 
 .input {

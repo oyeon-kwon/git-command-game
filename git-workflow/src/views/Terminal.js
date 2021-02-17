@@ -1,13 +1,14 @@
 import React from 'react';
 import './Terminal.css';
 import questions from '../questions.json';
-import Modal_T from './Modal_T';
-import Modal_F from './Modal_F';
+import Modal from './Modal';
+import { useHistory } from 'react-router-dom';
 
 function Terminal(props) {
 
   const currentChapter =  Number(props.currentChapter)
   const currentStep = Number(props.currentStep)
+  const history = useHistory()
   
   let inputValue = ''
 
@@ -18,6 +19,17 @@ function Terminal(props) {
       rightAnswerHandler()
       let terminal_guide = document.querySelector('.terminal_guide')
       terminal_guide.innerText = questions[currentStep - 1].terminal_guide
+    }
+  }
+
+  const continueHandler = () => {
+    let modal = document.querySelector('.modal_t');
+    modal.style.display = 'none';
+    if(currentStep === questions.length) {
+      history.push(`/end`);
+    } else {
+      history.push(`/chapter${currentChapter}/${currentStep + 1}`);
+      window.location.reload(false);
     }
   }
   
@@ -52,13 +64,17 @@ function Terminal(props) {
         <div className='bar_description'>질문 {currentStep}</div>
       </div>
       <div className='question_description'>{questions[currentStep - 1].description}</div>
-      <div className='terminal_guide'></div>
+      <pre className='terminal_guide'></pre>
       <div className='input_line'>
         <input onChange={inputHandler} onKeyPress={onEnterPress} className='input' autoFocus></input>
         <button onClick={moveNextStep} className='enter_btn'>Enter</button>
       </div>
-      <Modal_T className='modal_t' currentChapter={currentChapter} currentStep={currentStep}/>
-      <Modal_F className='modal_f'/>
+      <Modal isOpen={rightAnswerHandler} labelOK="Continue" continueHandler={continueHandler}>
+        정답입니다!
+      </Modal>
+      <Modal isOpen={wrongAnswerHandler} labelOK="Try Again">
+        잘못된 명령어입니다. <br /> 다시 시도해보시겠어요?
+      </Modal>
     </div>
   );
 }

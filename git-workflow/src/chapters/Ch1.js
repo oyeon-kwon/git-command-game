@@ -9,12 +9,12 @@ function Ch1 (props) {
   <>
     {
     currentStep === 1 ? 
-    <>
+    <div className="visual_container">
         <img src={githubLogo} className='github_logo' alt='git'></img>
-    </>
+    </div>
     :
     currentStep === 2 ?
-    <>
+    <div className="visual_container">
         <div className='remote show_commit'>
         <span className='visual_sub_title'>Remote</span>
         <div className='pair'>
@@ -27,10 +27,10 @@ function Ch1 (props) {
         <div className='local show_commit'>
         <span className='visual_sub_title'>Local</span>
         </div>
-    </>
+    </div>
     :
     currentStep === 3 ?
-    <>
+    <div className="visual_container">
         <div className='remote'>
         <span className='visual_sub_title'>Remote</span>
         <div className='pair'>
@@ -60,10 +60,10 @@ function Ch1 (props) {
             </div>
         </div>
         </div>
-    </>
+    </div>
     : 
     currentStep === 4 ?
-    <>
+    <div className="visual_container">
         <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" className="show_commit ch1_4">
         <circle cx="83.5" cy="56.5" r="9" fill="white" stroke="#4000C7" strokeDasharray="2 2"/>
         <rect x="40" width="88" height="27" rx="13.5" fill="#7D7D7D"/>
@@ -100,10 +100,10 @@ function Ch1 (props) {
             </div>
         </div>
         </div>
-    </>
+    </div>
     :
     currentStep === 5 ?
-    <>
+    <div className="visual_container">
         <svg width="120" height="128" viewBox="0 0 120 128" fill="none" xmlns="http://www.w3.org/2000/svg" className="ch1_5">
         <circle cx="84.5" cy="56.5" r="9" fill="#4000C7" stroke="#4000C7" className="show_commit"/>
         <rect x="50" width="70" height="27" rx="13.5" fill="#7D7D7D" className="show_commit"/>
@@ -139,9 +139,9 @@ function Ch1 (props) {
             </div>
         </div>
         </div>
-    </>
+    </div>
     : currentStep === 6 ?
-    <>
+    <div className="visual_container">
         <div className='remote'>
         <span className='visual_sub_title'>Remote</span>
         <div className='pair'>
@@ -183,7 +183,7 @@ function Ch1 (props) {
             </div>
         </div>
         </div>
-    </> : null
+    </div> : null
     }
   </>
   )

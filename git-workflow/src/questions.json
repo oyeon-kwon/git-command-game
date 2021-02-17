@@ -3,7 +3,7 @@
         "chapter": "1. 혼자 작업",
         "number": 1,
         "description": "# 김코딩이는 fork한 codestates 깃헙 리파지토리를 본인의 local에서 작업하려고 합니다. 복사한 깃헙 리파지토리 주소는 https://github.com/codestates/test 입니다.",
-        "terminal_guide": "Cloning into 'im-sprint-twittler-react'... remote: Enumerating objects: 3, done. remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 3 Unpacking objects: 100% (3/3), done.",
+        "terminal_guide": "Cloning into 'im-sprint-twittler-react'... \n remote: Enumerating objects: 3, done. \n remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 3 Unpacking objects: 100% (3/3), done.",
         "answer": ["git clone https://github.com/codestates/test"]
     },
     {
