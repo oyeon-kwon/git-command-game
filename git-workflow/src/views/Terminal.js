@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Terminal.css';
 import questions from '../questions.json';
 import Modal from './Modal';
@@ -9,6 +9,8 @@ function Terminal(props) {
   const currentChapter =  Number(props.currentChapter)
   const currentStep = Number(props.currentStep)
   const history = useHistory()
+
+  const [correct, isCorrect] = useState('none')
   
   let inputValue = ''
 
@@ -44,13 +46,11 @@ function Terminal(props) {
   }
 
   const rightAnswerHandler = () => {
-    let modal = document.querySelector('.modal_t')
-    modal.style.display = 'block';
+    isCorrect('true')
   }
 
   const wrongAnswerHandler = () => {
-    let modal = document.querySelector('.modal_f')
-    modal.style.display = 'block';
+    isCorrect('false')
   }
 
   return (
@@ -69,12 +69,18 @@ function Terminal(props) {
         <input onChange={inputHandler} onKeyPress={onEnterPress} className='input' autoFocus></input>
         <button onClick={moveNextStep} className='enter_btn'>Enter</button>
       </div>
-      <Modal isOpen={rightAnswerHandler} labelOK="Continue" continueHandler={continueHandler}>
-        정답입니다!
-      </Modal>
-      <Modal isOpen={wrongAnswerHandler} labelOK="Try Again">
-        잘못된 명령어입니다. <br /> 다시 시도해보시겠어요?
-      </Modal>
+      {
+      correct === 'true' ?
+        <Modal isOpen={rightAnswerHandler} labelOK="Continue" continueHandler={continueHandler}>
+          정답입니다!
+        </Modal>
+      :
+      correct === 'false' ?
+        <Modal isOpen={wrongAnswerHandler} labelOK="Try Again">
+          잘못된 명령어입니다. <br /> 다시 시도해보시겠어요?
+        </Modal>
+      : null
+      }
     </div>
   );
 }

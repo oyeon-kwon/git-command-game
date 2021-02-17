@@ -7,8 +7,7 @@ function Modal(props) {
   const labelOK = props.labelOK
 
   const retryHandler = () => {
-    let modal = document.querySelector('.modal_f');
-    modal.style.display = 'none';
+    window.location.reload(false);
   }
   
   return (
