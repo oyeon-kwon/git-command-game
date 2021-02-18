@@ -120,6 +120,16 @@ svg {
   margin-top: 295px;
 }
 
+.ch2_5 {
+  position: fixed;
+  margin-top: 58px;
+}
+
+.ch2_6 {
+  position: fixed;
+  margin-top: 445px;
+}
+
 @keyframes boxFade {
   0% {
    opacity: 0;

@@ -19,7 +19,7 @@ function Nav(props) {
   return (
     <div className='nav'>
       <div className='nav_title'>
-        Chapter {questions[currentStep - 1].chapter} ( {questions[currentStep - 1].number} / {questions.length} ) 
+        Chapter {questions[props.currentChapter][currentStep - 1].chapter} ( {questions[props.currentChapter][currentStep - 1].number} / {questions[props.currentChapter].length} ) 
         <button className='back_btn' onClick={backHandler}>Back</button>
       </div>
     </div>

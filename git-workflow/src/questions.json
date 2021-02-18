@@ -1,4 +1,5 @@
-[
+{
+  "1" : [
     {
         "chapter": "1. 혼자 작업",
         "number": 1,
@@ -40,33 +41,50 @@
         "description": "# 내 커밋 로그를 확인하는 명령어를 입력해보세요.",
         "terminal_guide": "commit 2a4535fec5934268a2bb5e41cd81a488891f02fb (HEAD -> main, origin/main, origin/HEAD) Author: kimcoding <kimcoding@gmail.com> Date:   Tue Feb 16 13:13:56 2021 +0900 completed",
         "answer": ["git log"]
-    },
+    }
+  ],
+  "2" : [
     {
         "chapter": "2. 함께 작업",
-        "number": 7,
+        "number": 1,
         "description": "# 김코딩은 local working directory를 Git의 관리 하에 들어가게 해 주려고 합니다.",
-        "terminal_guide": "",
+        "terminal_guide": "Initialized empty Git repository in /Users/kimcoding/Desktop/test/.git/",
         "answer": ["git init"]
     },
     {
         "chapter": "2. 함께 작업",
-        "number": 8,
-        "description": "# 김코딩은 페어 프로그래밍을 위해서 페어의 리모트 리파지토리를 본인의 로컬과 연결하려 합니다. 페어의 리파지토리 링크는 https://github.com/pair입니다.",
+        "number": 2,
+        "description": "# 김코딩은 페어 프로그래밍을 위해서 페어의 리모트 리파지토리를 본인의 로컬과 연결하려 합니다. 페어의 리파지토리 링크는 https://github.com/pair/test 입니다.",
         "terminal_guide": "",
-        "answer": ["git remote add pair https://github.com/pair"]
+        "answer": ["git remote add pair https://github.com/pair/test"]
     },
     {
         "chapter": "2. 함께 작업",
-        "number": 9,
-        "description": "# 페어가 작업해서 커밋해 놓은 내용을 내 로컬 리파지토리로 가져오려고 합니다.",
+        "number": 3,
+        "description": "# 잘 연결이 되었는지 확인해 볼까요?",
+        "terminal_guide": "origin https://github.com/kimcoding/test (fetch) \n origin https://github.com/kimcoding/test (push) \n pair https://github.com/pair/test (fetch) \n pair https://github.com/pair/test (push)",
+        "answer": ["git remote -v"]
+    },
+    {
+        "chapter": "2. 함께 작업",
+        "number": 4,
+        "description": "# 페어가 작업해서 main 브랜치에 커밋해 놓은 내용을 내 로컬 리파지토리로 가져오려고 합니다.",
         "terminal_guide": "",
         "answer": ["git pull pair main"]
     },
     {
         "chapter": "2. 함께 작업",
-        "number": 10,
+        "number": 5,
         "description": "# 내 로컬 리파지토리 파일에서 이것 저것 시도를 해보는 중에 페어가 새로운 부분을 업데이트 했다고 합니다. 내가 건드린 부분을 커밋하긴 애매하니 잠시 다른 공간에 저장해 둘 방법이 있을까요?",
-        "terminal_guide": "",
+        "terminal_guide": "Saved working directory and index state WIP on main: 6dbad99",
         "answer": ["git stash"]
+    },
+    {
+        "chapter": "2. 함께 작업",
+        "number": 6,
+        "description": "# enter 버튼을 통해 퀴즈를 완료합니다.",
+        "terminal_guide": "",
+        "answer": [""]
     }
-]
+  ]
+}

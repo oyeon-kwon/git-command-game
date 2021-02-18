@@ -15,7 +15,7 @@ function Terminal(props) {
   let inputValue = ''
 
   const moveNextStep = () => {
-    if(questions[currentStep - 1].answer.indexOf(inputValue) === -1){
+    if(questions[props.currentChapter][currentStep - 1].answer.indexOf(inputValue) === -1){
       wrongAnswerHandler()
     } else {
       rightAnswerHandler()
@@ -23,13 +23,16 @@ function Terminal(props) {
   }
 
   const continueHandler = () => {
-    let modal = document.querySelector('.modal_t');
-    modal.style.display = 'none';
-    if(currentStep === questions.length) {
+    let modal = document.querySelector('.modal_t')
+    modal.style.display = 'none'
+    if(!questions[String(currentChapter + 1)] && currentStep === questions[props.currentChapter].length) {
       history.push(`/end`);
+    } else if (currentStep === questions[props.currentChapter].length) {
+      history.push(`/chapter${currentChapter + 1}/1`)
+      window.location.reload(false)
     } else {
-      history.push(`/chapter${currentChapter}/${currentStep + 1}`);
-      window.location.reload(false);
+      history.push(`/chapter${currentChapter}/${currentStep + 1}`)
+      window.location.reload(false)
     }
   }
   
@@ -61,10 +64,10 @@ function Terminal(props) {
         </div>
         <div className='bar_description'>질문 {currentStep}</div>
       </div>
-      <div className='question_description'>{questions[currentStep - 1].description}</div>
+      <div className='question_description'>{questions[props.currentChapter][currentStep - 1].description}</div>
       {
       correct === 'true' ?
-        <pre className='terminal_guide'>{questions[currentStep - 1].terminal_guide}</pre>
+        <pre className='terminal_guide'>{questions[props.currentChapter][currentStep - 1].terminal_guide}</pre>
       : null
       }
       <div className='input_line'>
