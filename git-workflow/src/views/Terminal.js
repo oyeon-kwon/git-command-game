@@ -19,8 +19,6 @@ function Terminal(props) {
       wrongAnswerHandler()
     } else {
       rightAnswerHandler()
-      let terminal_guide = document.querySelector('.terminal_guide')
-      terminal_guide.innerText = questions[currentStep - 1].terminal_guide
     }
   }
 
@@ -64,7 +62,11 @@ function Terminal(props) {
         <div className='bar_description'>질문 {currentStep}</div>
       </div>
       <div className='question_description'>{questions[currentStep - 1].description}</div>
-      <pre className='terminal_guide'></pre>
+      {
+      correct === 'true' ?
+        <pre className='terminal_guide'>{questions[currentStep - 1].terminal_guide}</pre>
+      : null
+      }
       <div className='input_line'>
         <input onChange={inputHandler} onKeyPress={onEnterPress} className='input' autoFocus></input>
         <button onClick={moveNextStep} className='enter_btn'>Enter</button>
