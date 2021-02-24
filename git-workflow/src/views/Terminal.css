@@ -3,11 +3,12 @@
 .terminal {
   border-radius: 8px;
   background-color: rgb(206, 206, 206);
-  /* width: 1180px; */
+  width: 98%;
   height: 250px;
   margin: 10px;
   bottom: 0;
   overflow: scroll;
+  position: fixed;
 }
 
 .bar {
@@ -69,9 +70,9 @@
 
 .input_line {
   width: 1350px;
-  position: fixed;
+  position: absolute;
   display: flex;
-  bottom: 2rem;
+  bottom: 1rem;
 }
 
 .input {

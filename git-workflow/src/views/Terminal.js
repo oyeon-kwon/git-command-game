@@ -11,14 +11,14 @@ function Terminal(props) {
   const history = useHistory()
 
   const [correct, isCorrect] = useState('none')
+  const [inputValue, setInputValue] = useState('')
   
-  let inputValue = ''
-
   const moveNextStep = () => {
     if(questions[props.currentChapter][currentStep - 1].answer.indexOf(inputValue) === -1){
       wrongAnswerHandler()
     } else {
       rightAnswerHandler()
+      setInputValue('')
     }
   }
 
@@ -26,18 +26,18 @@ function Terminal(props) {
     let modal = document.querySelector('.modal_t')
     modal.style.display = 'none'
     if(!questions[String(currentChapter + 1)] && currentStep === questions[props.currentChapter].length) {
-      history.push(`/end`);
+      history.push(`/end`)
     } else if (currentStep === questions[props.currentChapter].length) {
       history.push(`/chapter${currentChapter + 1}/1`)
-      window.location.reload(false)
+      isCorrect('none')
     } else {
       history.push(`/chapter${currentChapter}/${currentStep + 1}`)
-      window.location.reload(false)
+      isCorrect('none')
     }
   }
   
   const inputHandler = (e) => {
-    inputValue = e.target.value
+    setInputValue(e.target.value)
   }
 
   const onEnterPress = (e) => {
@@ -71,7 +71,7 @@ function Terminal(props) {
       : null
       }
       <div className='input_line'>
-        <input onChange={inputHandler} onKeyPress={onEnterPress} className='input' autoFocus></input>
+        <input onChange={inputHandler} onKeyPress={onEnterPress} className='input' value={inputValue} autoFocus></input>
         <button onClick={moveNextStep} className='enter_btn'>Enter</button>
       </div>
       {

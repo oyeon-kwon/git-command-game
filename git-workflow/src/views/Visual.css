@@ -1,4 +1,5 @@
 .visual_container {
+  margin-top: 50px;
   width: 1200px;
   height: 560px;
 }
@@ -39,6 +40,14 @@
   border: 1px solid #c5caec;
   width: 98%;
   height: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.origin_ch3 {
+  border: 1px solid #c5caec;
+  width: 98%;
+  height: 220px;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -111,23 +120,77 @@ svg {
 }
 
 .ch1_4 {
-  position: fixed;
+  position: absolute;
   margin-top: 295px;
 }
 
 .ch1_5 {
-  position: fixed;
+  position: absolute;
   margin-top: 295px;
 }
 
 .ch2_5 {
-  position: fixed;
+  position: absolute;
   margin-top: 58px;
 }
 
 .ch2_6 {
-  position: fixed;
+  position: absolute;
   margin-top: 445px;
+}
+
+.ch3_1 {
+  position: absolute;
+  margin-top: 160px;
+}
+
+.ch3_2_1 {
+  position: absolute;
+  margin-top: 160px;
+}
+
+.ch3_2_2 {
+  position: absolute;
+  margin-top: 120px;
+  margin-left: 240px;
+}
+
+.ch3_3 {
+  position: absolute;
+  margin-top: 120px;
+}
+
+.ch3_4_1 {
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 300px;
+}
+
+.ch3_4_2 {
+  position: absolute;
+  margin-top: 120px;
+
+}
+
+.ch3_5 {
+  position: absolute;
+  margin-top: 100px;
+}
+
+.ch3_6 {
+  position: absolute;
+  margin-top: 100px;
+}
+
+.ch3_7_1 {
+  position: absolute;
+  margin-top: 100px;
+}
+
+.ch3_7_2 {
+  position: absolute;
+  margin-left: 283px;
+  margin-top: 160px;
 }
 
 @keyframes boxFade {

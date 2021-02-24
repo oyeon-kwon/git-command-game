@@ -2,25 +2,30 @@
   width: 100%;
   background-color: #4c56a1;
   color: white;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0
 }
 
 .nav_title {
-  padding: 1.4rem;
-  text-align: center;
+  margin: 0 auto;
+  font-size: 15px;
 }
 
 .back_btn {
   background-color: #c5caec;
   color: #4c56a1;
   border-radius: 2rem;
-  width: 4rem;
-  padding: 2px;
+  width: 50px;
+  padding-left: 2px;
   margin-left: 10px;
   border: 0;
   outline: 0;
-  height: 1.5rem;
-  text-align: center;
+  height: 20px;
   align-items: center;
+  font-size: 10px;
 }
 
 .back_btn:hover {
