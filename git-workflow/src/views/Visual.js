@@ -3,11 +3,17 @@ import './Visual.css';
 import Ch1 from '../chapters/Ch1';
 import Ch2 from '../chapters/Ch2';
 import Ch3 from '../chapters/Ch3';
+import Ch4 from '../chapters/Ch4';
 
 function Visual(props) {
 
   const currentChapter =  Number(props.currentChapter)
   const currentStep = Number(props.currentStep)
+
+  window.addEventListener('load', (e) => {
+    const scale = document.documentElement.clientHeight / 900;
+    document.querySelector('.visual_container').style.cssText = `zoom: ${scale}`
+  })
 
   window.addEventListener('resize', (e) => {
     const scale = document.documentElement.clientHeight / 900;
@@ -23,6 +29,8 @@ function Visual(props) {
         <Ch2 currentStep={currentStep} />
       : currentChapter === 3 ?
         <Ch3 currentStep={currentStep} />
+      : currentChapter === 4 ?
+        <Ch4 currentStep={currentStep} />
       : null
     }
     </>

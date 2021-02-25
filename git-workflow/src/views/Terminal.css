@@ -69,22 +69,21 @@
 }
 
 .input_line {
-  width: 1350px;
+  width: 100%;
   position: absolute;
   display: flex;
   bottom: 1rem;
 }
 
 .input {
-  width: 75%;
+  width: 89%;
   height: 30px;
-  margin-left: 20px;
+  margin: 0 auto;
   font-size: 25px;
 }
 
 .enter_btn {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0 auto;
   width: 100px;
   height: 35px;
   border-radius: 20px;
