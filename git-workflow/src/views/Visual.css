@@ -1,8 +1,5 @@
 .visual_container {
-  margin-top: 50px;
-  width: 100%;
-  height: 560px;
-  /* position: fixed; */
+  flex: 1 0 auto;
 }
 
 .visual_sub_title {

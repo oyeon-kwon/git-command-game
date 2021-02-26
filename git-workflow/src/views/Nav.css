@@ -1,12 +1,9 @@
 .nav {
-  width: 100%;
   background-color: #4c56a1;
   color: white;
-  height: 45px;
   display: flex;
   align-items: center;
-  position: fixed;
-  top: 0
+  flex: 0 1 40px;
 }
 
 .nav_title {

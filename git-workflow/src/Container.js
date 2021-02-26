@@ -9,10 +9,10 @@ function Container() {
   let { chapter, number } = useParams();
 
   return (
-    <div>
-      <Nav currentChapter={chapter} currentStep={number}/>
-      <Visual currentChapter={chapter} currentStep={number}/>
-      <Terminal currentChapter={chapter} currentStep={number}/>
+    <div id="container">
+      <Nav currentChapter={chapter} currentStep={number} />
+      <Visual currentChapter={chapter} currentStep={number} />
+      <Terminal currentChapter={chapter} currentStep={number} />
     </div>
   )
 }

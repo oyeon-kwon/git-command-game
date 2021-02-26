@@ -3,17 +3,15 @@
 .terminal {
   border-radius: 8px;
   background-color: rgb(206, 206, 206);
-  width: 98%;
-  height: 250px;
   margin: 10px;
-  bottom: 0;
-  overflow: scroll;
-  position: fixed;
+  overflow: hidden;
+  flex: 0 1 250px;
+  display: flex;
+  flex-direction: column;
 }
 
 .bar {
-  width: 100%;
-  height: 30px;
+  flex: 0 1 30px;
   font-size: 16px;
   font-weight: 700;
   background-color:#4c56a1;
@@ -55,40 +53,37 @@
 
 .question_description {
   color: #4c56a1;
-  margin-top: 20px;
-  margin-left: 20px;
+  margin: 20px;
+  flex: 0 1 50px;
 }
 
 .terminal_guide {
-  width: 1150px;
   color:rgb(68, 179, 63);
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
-  overflow: scroll;
+  margin: 0 20px;
+  overflow: auto;
+  flex: 1 0 auto;
 }
 
 .input_line {
-  width: 100%;
-  position: absolute;
+  flex: 0 1 30px;
   display: flex;
+  margin: 20px;
   bottom: 1rem;
 }
 
-.input {
-  width: 89%;
+.input_line .input {
+  width: 100%;
+  margin-right: 10px;
+  flex: auto;
   height: 30px;
-  margin: 0 auto;
   font-size: 25px;
 }
 
 .enter_btn {
-  margin: 0 auto;
-  width: 100px;
-  height: 35px;
+  flex: 0 1 100px;
+  height: 30px;
   border-radius: 20px;
   border: 0;
-  outline: 0;
 }
 
 .enter_btn:hover {
