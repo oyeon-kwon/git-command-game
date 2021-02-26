@@ -7,7 +7,7 @@ function Modal(props) {
   const labelOK = props.labelOK
 
   const retryHandler = () => {
-    window.location.reload(false);
+    window.location.reload();
   }
   
   return (

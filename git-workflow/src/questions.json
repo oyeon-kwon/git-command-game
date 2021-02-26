@@ -106,28 +106,28 @@
         "chapter": "3. 브랜치 작업",
         "number": 3,
         "description": "# test 브랜치에서 로그인 구현 작업을 하던 중 또 다른 방법이 생각났습니다. 실험을 위해 test2 라는 브랜치를 생성해볼까요?",
-        "terminal_guide": "",
+        "terminal_guide": "Switched to a new branch 'test2'",
         "answer": ["git switch -c test2", "git checkout -b test2"]
     },
     {
         "chapter": "3. 브랜치 작업",
         "number": 4,
         "description": "# test2 브랜치에서 하던 작업들에 오류가 있습니다. 재빨리 test 브랜치로 이동해서 다시 시작해야겠어요.",
-        "terminal_guide": "",
+        "terminal_guide": "Switched to branch 'test' \n Your branch is up to date with 'origin/test'.",
         "answer": ["git switch test", "git checkout test"]
     },
     {
         "chapter": "3. 브랜치 작업",
         "number": 5,
         "description": "# test 브랜치에서 작업을 하던 중 원하는 결과물이 완성되었습니다! 이 코드를 main 브랜치로 옮길 방법이 있을까요? (1. 먼저 메인 브랜치로 옮기기)",
-        "terminal_guide": "",
+        "terminal_guide": "Switched to branch 'main' \n Your branch is up to date with 'origin/main'.",
         "answer": ["git switch main", "git checkout main"]
     },
     {
         "chapter": "3. 브랜치 작업",
         "number": 6,
         "description": "# test 브랜치에서 작업을 하던 중 원하는 결과물이 완성되었습니다! 이 코드를 main 브랜치로 옮길 방법이 있을까요? (2. 머지하기)",
-        "terminal_guide": "",
+        "terminal_guide": "Updating 3bda7a6..ce8db65 \n Fast-forward \n index.js | 3 ++- \n 1 file changed, 2 insertions(+), 1 deletion(-)",
         "answer": ["git merge test"]
     },
     {
@@ -143,22 +143,22 @@
         "chapter": "4. 충돌 해결하기",
         "number": 1,
         "description": "# 페어 프로그래밍을 진행하고 있습니다. 각자 작업을 진행하던 중 서로 작업한 파일을 공유하기 위해 먼저 내가 로컬에서 커밋해 놓은 파일을 리모트 main 브랜치에 푸쉬하려고 합니다.",
-        "terminal_guide": "",
+        "terminal_guide": "Enumerating objects: 1, done. \n Counting objects: 100% (1/1), done. \n Delta compression using up to 1 threads. \n Compressing objects: 100% (1/1), done. \n Writing objects: 100% (1/1), 212.65 KiB | 10.63 MiB/s, done. \n Total 1 (delta 0), reused 0 (delta 0). To https://github.com/kimcoding/test 9ec18c7..2a4535f  main -> main",
         "answer": ["git push origin main"]
     },
     {
         "chapter": "4. 충돌 해결하기",
         "number": 2,
         "description": "# 페어도 똑같이 본인의 main 브랜치에 푸쉬한 파일이 있네요. 페어가 작업한 내용을 내 로컬로 가지고 와 볼까요?",
-        "terminal_guide": "",
+        "terminal_guide": "From https://github.com/kimcoding/test \n * branch            master     -> FETCH_HEAD \n * [new branch]      master     -> pair/master \n Already up to date.",
         "answer": ["git pull pair main"]
     },
     {
         "chapter": "4. 충돌 해결하기",
         "number": 3,
         "description": "# 충돌이 발생했어요! resolve 브랜치를 만들어서 충돌난 부분을 해결해봅시다.",
-        "terminal_guide": "",
-        "answer": ["git checkout -b resolve"]
+        "terminal_guide": "Switched to a new branch 'resolve'",
+        "answer": ["git checkout -b resolve", "git switch -c resolve"]
     },
     {
         "chapter": "4. 충돌 해결하기",
@@ -171,28 +171,28 @@
         "chapter": "4. 충돌 해결하기",
         "number": 5,
         "description": "# 충돌을 해결했으니 resolve conflict 라는 커밋 메시지로 커밋을 날려봅시다.",
-        "terminal_guide": "",
+        "terminal_guide": "[resolve ce8db65] resolve conflict \n 1 file changed, 2 insertions(+), 1 deletion(-)",
         "answer": ["git commit -m 'resolve conflict'"]
     },
     {
         "chapter": "4. 충돌 해결하기",
         "number": 6,
         "description": "# 커밋이 완료되었으니 resolve 브랜치를 main 브랜치에 merge하는 작업을 진행해 볼까요? 먼저 main 브랜치로 이동하세요.",
-        "terminal_guide": "",
+        "terminal_guide": "Switched to branch 'main' \n Your branch is up to date with 'origin/main'.",
         "answer": ["git checkout main"]
     },
     {
         "chapter": "4. 충돌 해결하기",
         "number": 7,
         "description": "# resolve 브랜치에서 작업한 내용을 main 브랜치로 merge 하세요.",
-        "terminal_guide": "",
+        "terminal_guide": "Updating 3bda7a6..ce8db65 \n Fast-forward \n index.js | 3 ++- \n 1 file changed, 2 insertions(+), 1 deletion(-)",
         "answer": ["git merge resolve"]
     },
     {
         "chapter": "4. 충돌 해결하기",
         "number": 8,
         "description": "# merge된 파일을 나의 remote repository main 브랜치와 sync를 맞추어 봅시다.",
-        "terminal_guide": "",
+        "terminal_guide": "Enumerating objects: 5, done. \n Counting objects: 100% (5/5), done. \n Writing objects: 100% (3/3), 275 bytes | 275.00 KiB/s, done. \n Total 3 (delta 0), reused 0 (delta 0) \n To https://github.com/kimcoding/test.git \n 3bda7a6..ce8db65  main -> main",
         "answer": ["git push origin main"]
     },
     {

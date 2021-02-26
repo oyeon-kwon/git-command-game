@@ -13,7 +13,7 @@ function Terminal(props) {
   const [correct, isCorrect] = useState('none')
   const [inputValue, setInputValue] = useState('')
   
-  const moveNextStep = () => {
+  const checkAnswerHandler = () => {
     if(questions[props.currentChapter][currentStep - 1].answer.indexOf(inputValue) === -1){
       wrongAnswerHandler()
     } else {
@@ -23,8 +23,6 @@ function Terminal(props) {
   }
 
   const continueHandler = () => {
-    let modal = document.querySelector('.modal_t')
-    modal.style.display = 'none'
     if(!questions[String(currentChapter + 1)] && currentStep === questions[props.currentChapter].length) {
       history.push(`/end`)
     } else if (currentStep === questions[props.currentChapter].length) {
@@ -41,12 +39,18 @@ function Terminal(props) {
   }
 
   const onEnterPress = (e) => {
-    if(e.key === 'Enter') {
-      moveNextStep()
+    if(e.key === 'Enter' && correct === 'none') {
+      checkAnswerHandler()
+    } else if(e.key === 'Enter' && correct === 'true') {
+      continueHandler()
+      isCorrect('none')
+    } else if(e.key === 'Enter' && correct === 'false') {
+      isCorrect('none')
+      setInputValue('')
     }
   }
 
-  const rightAnswerHandler = () => {
+  const rightAnswerHandler = (e) => {
     isCorrect('true')
   }
 
@@ -64,15 +68,15 @@ function Terminal(props) {
         </div>
         <div className='bar_description'>질문 {currentStep}</div>
       </div>
-      <div className='question_description'>{questions[props.currentChapter][currentStep - 1].description}</div>
+      <div className='question_description'>{questions[String(currentChapter)][currentStep - 1].description}</div>
       {
       correct === 'true' ?
-        <pre className='terminal_guide'>{questions[props.currentChapter][currentStep - 1].terminal_guide}</pre>
+        <pre className='terminal_guide'>{questions[String(currentChapter)][currentStep - 1].terminal_guide}</pre>
       : null
       }
       <div className='input_line'>
         <input onChange={inputHandler} onKeyPress={onEnterPress} className='input' value={inputValue} autoFocus></input>
-        <button onClick={moveNextStep} className='enter_btn'>Enter</button>
+        <button onClick={checkAnswerHandler} className='enter_btn'>Enter</button>
       </div>
       {
       correct === 'true' ?
