@@ -7,20 +7,19 @@ import {
   BrowserRouter as Router,
   Switch,
   Route
-} from "react-router-dom";
+} from 'react-router-dom';
 
-function App() {
-
+function App () {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
+        <Route exact path='/'>
           <Start />
         </Route>
-        <Route path={`/chapter:chapter/:number`} container={<Container />}>
+        <Route path='/chapter:chapter/:number' container={<Container />}>
           <Container />
         </Route>
-        <Route exact path="/end">
+        <Route exact path='/end'>
           <End />
         </Route>
       </Switch>

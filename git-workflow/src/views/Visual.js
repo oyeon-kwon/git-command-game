@@ -5,33 +5,32 @@ import Ch2 from '../chapters/Ch2';
 import Ch3 from '../chapters/Ch3';
 import Ch4 from '../chapters/Ch4';
 
-function Visual(props) {
-
-  const currentChapter =  Number(props.currentChapter)
-  const currentStep = Number(props.currentStep)
+function Visual (props) {
+  const currentChapter = Number(props.currentChapter);
+  const currentStep = Number(props.currentStep);
 
   window.addEventListener('load', (e) => {
     const scale = document.documentElement.clientHeight / 900;
-    document.querySelector('.visual_container').style.cssText = `zoom: ${scale}`
-  })
+    document.querySelector('.visual_container').style.cssText = `zoom: ${scale}`;
+  });
 
   window.addEventListener('resize', (e) => {
     const scale = document.documentElement.clientHeight / 900;
-    document.querySelector('.visual_container').style.cssText = `zoom: ${scale}`
-  })
+    document.querySelector('.visual_container').style.cssText = `zoom: ${scale}`;
+  });
 
   return (
     <>
-    {
-      currentChapter === 1 ?
-        <Ch1 currentStep={currentStep} />
-      : currentChapter === 2 ?
-        <Ch2 currentStep={currentStep} />
-      : currentChapter === 3 ?
-        <Ch3 currentStep={currentStep} />
-      : currentChapter === 4 ?
-        <Ch4 currentStep={currentStep} />
-      : null
+      {
+      currentChapter === 1
+        ? <Ch1 currentStep={currentStep} />
+        : currentChapter === 2
+          ? <Ch2 currentStep={currentStep} />
+          : currentChapter === 3
+            ? <Ch3 currentStep={currentStep} />
+            : currentChapter === 4
+              ? <Ch4 currentStep={currentStep} />
+              : null
     }
     </>
   );

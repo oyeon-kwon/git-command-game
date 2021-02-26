@@ -2,23 +2,22 @@ import React from 'react';
 import './Start.css';
 import logo from '../logo.png';
 
-function Start() {
-
+function Start () {
   const quizStartHandler = () => {
-    window.location.href = 'http://localhost:3000/chapter1/1'
-  }
+    window.location.href = 'http://localhost:3000/chapter1/1';
+  };
 
   return (
-    <div className="start_body">
-      <img src={logo} className="logo" alt="logo"></img>
+    <div className='start_body'>
+      <img src={logo} className='logo' alt='logo' />
       <h1>Git Commands <br /> Checkpoint</h1>
-      <div className="start_description">
+      <div className='start_description'>
         Git Commands 체크포인트에 오신 것을 환영합니다!<br />
         터미널에 적힌 설명의 상황에 맞게 필요한 Git 명령어를 입력해주세요.
       </div>
-      <button className="start_btn" onClick={quizStartHandler}>START</button>
+      <button className='start_btn' onClick={quizStartHandler}>START</button>
     </div>
-  )
+  );
 }
 
 export default Start;
