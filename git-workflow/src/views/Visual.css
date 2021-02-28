@@ -1,5 +1,6 @@
 .visual_container {
   flex: 1 0 auto;
+  /* height: 410px; */
 }
 
 .visual_sub_title {
@@ -20,6 +21,13 @@
 
 .remote {
   height: 250px;
+  margin: 10px;
+  border: 1px solid #4000c7;
+  border-radius: 8px;
+}
+
+.remote_ch3 {
+  height: 150px;
   margin: 10px;
   border: 1px solid #4000c7;
   border-radius: 8px;
@@ -57,8 +65,19 @@
   border-radius: 8px;
 }
 
+.local_ch3 {
+  border: 1px solid #4000c7;
+  height: 400px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
 .commit {
   height: 7rem;
+}
+
+.commit_ch3 {
+  height: 13rem;
 }
 
 .layout {
@@ -110,7 +129,8 @@
 }
 
 svg {
-  margin-left: 50px;
+  /* margin-left: 50px; */
+  position: absolute;
 }
 
 .show_commit {
