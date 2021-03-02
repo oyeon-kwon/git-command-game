@@ -4,8 +4,6 @@ import questions from '../questions.json';
 import { useHistory } from 'react-router-dom';
 
 function Nav (props) {
-  // App.js에서 상태 받아 와서 점수 구현 필요
-
   const currentChapter = Number(props.currentChapter);
   const currentStep = Number(props.currentStep);
   const history = useHistory();
@@ -13,10 +11,10 @@ function Nav (props) {
   const backHandler = () => {
     if (currentChapter !== 1 && currentStep === 1) {
       history.push(`/chapter${currentChapter - 1}/${questions[String(currentChapter - 1)].length}`);
-    }
-
-    if (currentChapter === 1 && currentStep === 1) {
+    } else if (currentChapter === 1 && currentStep === 1) {
       history.push('/');
+    } else {
+      history.push(`/chapter${currentChapter}/${currentStep - 1}`);
     }
   };
 

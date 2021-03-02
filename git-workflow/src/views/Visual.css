@@ -128,8 +128,11 @@
   margin-bottom: 250px;
 }
 
+.svg {
+  position: absolute;
+}
+
 svg {
-  /* margin-left: 50px; */
   position: absolute;
 }
 

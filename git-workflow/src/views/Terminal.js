@@ -77,7 +77,7 @@ function Terminal (props) {
         }
       </pre>
       <div className='input_line'>
-        <input onChange={inputHandler} onKeyPress={onEnterPress} className='input' value={inputValue} autoFocus />
+        <input onChange={inputHandler} onKeyPress={onEnterPress} className='input' value={inputValue} placeholder='여기에 명령어를 입력하세요.' autoFocus />
         <button onClick={checkAnswerHandler} className='enter_btn'>Enter</button>
       </div>
       {

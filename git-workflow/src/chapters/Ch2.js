@@ -1,5 +1,7 @@
 import React from 'react';
 import githubLogo from '../github.png';
+import Remote from './layouts/Remote';
+import Local from './layouts/Local';
 
 function Ch2 (props) {
   const currentStep = props.currentStep;
@@ -13,63 +15,13 @@ function Ch2 (props) {
           </>
         : currentStep === 2
           ? <>
-            <div className='remote show_commit'>
-              <span className='visual_sub_title'>Remote</span>
-              <div className='pair' />
-              <div className='origin'>
-                <span className='visual_third_title'>origin</span>
-              </div>
-            </div>
-            <div className='local'>
-              <span className='visual_sub_title'>Local</span>
-              <div className='commit show_commit' />
-              <div className='layout show_commit'>
-                <div className='left'>
-                  <div className='staging'>
-                    <span className='visual_third_title'>staging</span>
-                  </div>
-                  <div className='untracked'>
-                    <span className='visual_third_title'>untracked</span>
-                  </div>
-                </div>
-                <div className='right'>
-                  <div className='stash'>
-                    <span className='visual_third_title'>stash</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Remote effect='show_commit' />
+            <Local effect='show_commit' localStatus='true' />
           </>
           : currentStep === 3
             ? <>
-              <div className='remote'>
-                <span className='visual_sub_title'>Remote</span>
-                <div className='pair show_commit'>
-                  <div className='visual_third_title'>pair</div>
-                </div>
-                <div className='origin'>
-                  <span className='visual_third_title'>origin</span>
-                </div>
-              </div>
-              <div className='local'>
-                <span className='visual_sub_title'>Local</span>
-                <div className='commit' />
-                <div className='layout'>
-                  <div className='left'>
-                    <div className='staging'>
-                      <span className='visual_third_title'>staging</span>
-                    </div>
-                    <div className='untracked'>
-                      <span className='visual_third_title'>untracked</span>
-                    </div>
-                  </div>
-                  <div className='right'>
-                    <div className='stash'>
-                      <span className='visual_third_title'>stash</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <Remote remoteStatus='true' />
+              <Local localStatus='true' />
             </>
             : currentStep === 4
               ? <>
@@ -80,35 +32,8 @@ function Ch2 (props) {
                   <path d='M154.739 100.627L163.675 101.094L160.662 107.333L154.739 100.627Z' fill='black' />
                   <path d='M171.791 106.219L171.535 106.811C172.137 106.545 172.764 106.569 173.415 106.884C174.147 107.237 174.51 107.758 174.503 108.447C174.799 108.28 175.122 108.185 175.475 108.165C175.83 108.145 176.198 108.227 176.578 108.411C177.726 108.965 178.016 109.855 177.449 111.08L175.756 114.587L174.861 114.155L176.528 110.701C176.709 110.327 176.758 110.007 176.676 109.741C176.595 109.471 176.353 109.239 175.95 109.044C175.618 108.884 175.294 108.851 174.978 108.945C174.664 109.036 174.408 109.24 174.211 109.559L172.534 113.031L171.635 112.597L173.29 109.168C173.658 108.407 173.469 107.846 172.724 107.487C172.137 107.203 171.615 107.259 171.158 107.655L169.313 111.476L168.418 111.044L170.945 105.811L171.791 106.219ZM180.341 116.801C180.339 116.672 180.386 116.468 180.481 116.188C179.857 116.42 179.256 116.396 178.679 116.117C178.163 115.868 177.809 115.518 177.617 115.068C177.43 114.616 177.444 114.165 177.661 113.717C177.924 113.172 178.334 112.849 178.892 112.749C179.454 112.647 180.111 112.777 180.862 113.14L181.733 113.56L181.931 113.149C182.082 112.836 182.108 112.543 182.01 112.268C181.913 111.991 181.683 111.765 181.319 111.589C180.999 111.434 180.693 111.386 180.399 111.443C180.105 111.5 179.903 111.643 179.792 111.872L178.893 111.437C179.019 111.176 179.232 110.969 179.533 110.816C179.838 110.661 180.183 110.589 180.567 110.6C180.955 110.612 181.339 110.71 181.72 110.894C182.323 111.185 182.722 111.564 182.917 112.032C183.114 112.497 183.092 112.997 182.849 113.532L181.686 115.941C181.454 116.422 181.331 116.833 181.317 117.176L181.279 117.254L180.341 116.801ZM179.185 115.402C179.466 115.537 179.767 115.593 180.088 115.569C180.41 115.546 180.683 115.445 180.908 115.267L181.427 114.194L180.725 113.855C179.629 113.326 178.926 113.382 178.616 114.023C178.481 114.304 178.468 114.568 178.579 114.817C178.69 115.065 178.892 115.26 179.185 115.402ZM183.47 118.312L182.576 117.88L185.102 112.646L185.997 113.078L183.47 118.312ZM185.7 111.223C185.77 111.078 185.873 110.976 186.008 110.918C186.147 110.862 186.303 110.876 186.477 110.96C186.651 111.044 186.759 111.158 186.801 111.301C186.843 111.445 186.829 111.589 186.759 111.734C186.689 111.879 186.586 111.979 186.449 112.032C186.312 112.085 186.156 112.069 185.982 111.985C185.808 111.901 185.699 111.789 185.655 111.649C185.615 111.51 185.63 111.368 185.7 111.223ZM188.28 114.18L187.992 114.852C188.634 114.542 189.278 114.543 189.923 114.854C191.029 115.388 191.286 116.282 190.693 117.534L189.023 120.993L188.128 120.56L189.8 117.097C189.979 116.718 190.027 116.398 189.943 116.134C189.863 115.873 189.643 115.656 189.285 115.483C188.995 115.343 188.703 115.297 188.409 115.346C188.115 115.395 187.846 115.516 187.602 115.708L185.802 119.437L184.907 119.005L187.434 113.772L188.28 114.18Z' fill='white' />
                 </svg>
-
-                <div className='remote'>
-                  <span className='visual_sub_title'>Remote</span>
-                  <div className='pair'>
-                    <div className='visual_third_title'>pair</div>
-                  </div>
-                  <div className='origin'>
-                    <span className='visual_third_title'>origin</span>
-                  </div>
-                </div>
-                <div className='local'>
-                  <span className='visual_sub_title'>Local</span>
-                  <div className='commit' />
-                  <div className='layout'>
-                    <div className='left'>
-                      <div className='staging'>
-                        <span className='visual_third_title'>staging</span>
-                      </div>
-                      <div className='untracked'>
-                        <span className='visual_third_title'>untracked</span>
-                      </div>
-                    </div>
-                    <div className='right'>
-                      <div className='stash'>
-                        <span className='visual_third_title'>stash</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <Remote remoteStatus='true' />
+                <Local localStatus='true' />
               </>
               : currentStep === 5
                 ? <>
@@ -124,35 +49,8 @@ function Ch2 (props) {
                     <path d='M250.791 106.219L250.535 106.811C251.137 106.545 251.764 106.569 252.415 106.884C253.147 107.237 253.51 107.758 253.503 108.447C253.799 108.28 254.122 108.185 254.475 108.165C254.83 108.145 255.198 108.227 255.578 108.411C256.726 108.965 257.016 109.855 256.449 111.08L254.756 114.587L253.861 114.155L255.528 110.701C255.709 110.327 255.758 110.007 255.676 109.741C255.595 109.471 255.353 109.239 254.95 109.044C254.618 108.884 254.294 108.851 253.978 108.945C253.664 109.036 253.408 109.24 253.211 109.559L251.534 113.031L250.635 112.597L252.29 109.168C252.658 108.407 252.469 107.846 251.724 107.487C251.137 107.203 250.615 107.259 250.158 107.655L248.313 111.476L247.418 111.044L249.945 105.811L250.791 106.219ZM259.341 116.801C259.339 116.672 259.386 116.468 259.481 116.188C258.857 116.42 258.256 116.396 257.679 116.117C257.163 115.868 256.809 115.518 256.617 115.068C256.43 114.616 256.444 114.165 256.661 113.717C256.924 113.172 257.334 112.849 257.892 112.749C258.454 112.647 259.111 112.777 259.862 113.14L260.733 113.56L260.931 113.149C261.082 112.836 261.108 112.543 261.01 112.268C260.913 111.991 260.683 111.765 260.319 111.589C259.999 111.434 259.693 111.386 259.399 111.443C259.105 111.5 258.903 111.643 258.792 111.872L257.893 111.437C258.019 111.176 258.232 110.969 258.533 110.816C258.838 110.661 259.183 110.589 259.567 110.6C259.955 110.612 260.339 110.71 260.72 110.894C261.323 111.185 261.722 111.564 261.917 112.032C262.114 112.497 262.092 112.997 261.849 113.532L260.686 115.941C260.454 116.422 260.331 116.833 260.317 117.176L260.279 117.254L259.341 116.801ZM258.185 115.402C258.466 115.537 258.767 115.593 259.088 115.569C259.41 115.546 259.683 115.445 259.908 115.267L260.427 114.194L259.725 113.855C258.629 113.326 257.926 113.382 257.616 114.023C257.481 114.304 257.468 114.568 257.579 114.817C257.69 115.065 257.892 115.26 258.185 115.402ZM262.47 118.312L261.576 117.88L264.102 112.646L264.997 113.078L262.47 118.312ZM264.7 111.223C264.77 111.078 264.873 110.976 265.008 110.918C265.147 110.862 265.303 110.876 265.477 110.96C265.651 111.044 265.759 111.158 265.801 111.301C265.843 111.445 265.829 111.589 265.759 111.734C265.689 111.879 265.586 111.979 265.449 112.032C265.312 112.085 265.156 112.069 264.982 111.985C264.808 111.901 264.699 111.789 264.655 111.649C264.615 111.51 264.63 111.368 264.7 111.223ZM267.28 114.18L266.992 114.852C267.634 114.542 268.278 114.543 268.923 114.854C270.029 115.388 270.286 116.282 269.693 117.534L268.023 120.993L267.128 120.56L268.8 117.097C268.979 116.718 269.027 116.398 268.943 116.134C268.863 115.873 268.643 115.656 268.285 115.483C267.995 115.343 267.703 115.297 267.409 115.346C267.115 115.395 266.846 115.516 266.602 115.708L264.802 119.437L263.907 119.005L266.434 113.772L267.28 114.18Z' fill='white' />
                     <line x1='149' y1='95.5' x2='211' y2='95.5' stroke='#4000C7' />
                   </svg>
-
-                  <div className='remote'>
-                    <span className='visual_sub_title'>Remote</span>
-                    <div className='pair'>
-                      <div className='visual_third_title'>pair</div>
-                    </div>
-                    <div className='origin'>
-                      <span className='visual_third_title'>origin</span>
-                    </div>
-                  </div>
-                  <div className='local'>
-                    <span className='visual_sub_title'>Local</span>
-                    <div className='commit' />
-                    <div className='layout'>
-                      <div className='left'>
-                        <div className='staging'>
-                          <span className='visual_third_title'>staging</span>
-                        </div>
-                        <div className='untracked'>
-                          <span className='visual_third_title'>untracked</span>
-                        </div>
-                      </div>
-                      <div className='right'>
-                        <div className='stash'>
-                          <span className='visual_third_title'>stash</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <Remote remoteStatus='true' />
+                  <Local localStatus='true' />
                 </>
                 : currentStep === 6
                   ? <>
@@ -164,35 +62,8 @@ function Ch2 (props) {
                       <path d='M872.746 485.016L866.938 479.252C866.776 479.091 866.558 479 866.328 479H854.864C854.386 479 854 479.383 854 479.857V502.143C854 502.617 854.386 503 854.864 503H872.136C872.614 503 873 502.617 873 502.143V485.624C873 485.396 872.908 485.177 872.746 485.016ZM871.008 486.018H865.929V480.977L871.008 486.018ZM871.057 501.071H855.943V480.929H864.094V486.714C864.094 487.013 864.213 487.299 864.426 487.51C864.638 487.721 864.927 487.839 865.227 487.839H871.057V501.071ZM863.284 493.839H858.318C858.199 493.839 858.102 493.936 858.102 494.054V495.339C858.102 495.457 858.199 495.554 858.318 495.554H863.284C863.403 495.554 863.5 495.457 863.5 495.339V494.054C863.5 493.936 863.403 493.839 863.284 493.839ZM858.102 490.411V491.696C858.102 491.814 858.199 491.911 858.318 491.911H868.682C868.801 491.911 868.898 491.814 868.898 491.696V490.411C868.898 490.293 868.801 490.196 868.682 490.196H858.318C858.199 490.196 858.102 490.293 858.102 490.411Z' fill='#4000C7' />
                       <path d='M837.361 496.119C837.545 495.914 837.528 495.598 837.323 495.413L833.974 492.407C833.769 492.222 833.453 492.239 833.268 492.445C833.084 492.65 833.101 492.967 833.306 493.151L836.282 495.823L833.61 498.8C833.426 499.005 833.443 499.321 833.648 499.506C833.854 499.69 834.17 499.673 834.354 499.468L837.361 496.119ZM164.027 532.499L837.015 496.285L836.962 495.286L163.973 531.501L164.027 532.499Z' fill='#4000C7' />
                     </svg>
-
-                    <div className='remote'>
-                      <span className='visual_sub_title'>Remote</span>
-                      <div className='pair'>
-                        <div className='visual_third_title'>pair</div>
-                      </div>
-                      <div className='origin'>
-                        <span className='visual_third_title'>origin</span>
-                      </div>
-                    </div>
-                    <div className='local'>
-                      <span className='visual_sub_title'>Local</span>
-                      <div className='commit' />
-                      <div className='layout'>
-                        <div className='left'>
-                          <div className='staging'>
-                            <span className='visual_third_title'>staging</span>
-                          </div>
-                          <div className='untracked'>
-                            <span className='visual_third_title'>untracked</span>
-                          </div>
-                        </div>
-                        <div className='right'>
-                          <div className='stash'>
-                            <span className='visual_third_title'>stash</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <Remote remoteStatus='true' />
+                    <Local localStatus='true' />
                   </>
                   : null
     }
