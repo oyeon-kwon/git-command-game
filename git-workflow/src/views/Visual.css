@@ -76,6 +76,10 @@
   height: 7rem;
 }
 
+img {
+  position: absolute;
+}
+
 .commit_ch3 {
   height: 13rem;
 }
