@@ -2,19 +2,28 @@ import React from 'react';
 import Repository from './Repository';
 
 function Remote (props) {
+  const renderByType = (option) => {
+    switch (option) {
+      case 'true':
+        return (
+          <>
+            <Repository title='pair' />
+            <Repository title='origin' />
+          </>
+        );
+      case 'origin-only':
+        return <Repository title='origin' />;
+    }
+  };
   return (
     <>
       <div className={`${props.effect} ${props.ch3} remote`}>
         <div className='visual_sub_title'>Remote</div>
-        {
-          props.remoteStatus === 'true'
-            ? <div style={{ height: '100%' }}>
-              <Repository title='pair' />
-              <Repository title='origin' />
-            </div>
-            : null
-        }
-
+        <div className='area_box_container'>
+          {
+            renderByType(props.remoteStatus)
+          }
+        </div>
       </div>
       <hr />
     </>
