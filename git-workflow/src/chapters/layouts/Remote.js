@@ -1,7 +1,7 @@
 import React from 'react';
 import Repository from './Repository';
 
-function Remote(props) {
+function Remote (props) {
   return (
     <>
       <div className={`${props.effect} ${props.ch3} remote`}>
@@ -16,7 +16,7 @@ function Remote(props) {
         }
 
       </div>
-      <hr></hr>
+      <hr />
     </>
   );
 }

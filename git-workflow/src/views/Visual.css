@@ -1,10 +1,10 @@
 .visual_container {
-  flex: 1 0 auto;
+  flex: 0 0 auto;
   /* height: 410px; */
 }
 
 .visual_container > img {
-  z-index: 999;
+  z-index: 10;
 }
 
 .visual_sub_title {
@@ -36,7 +36,7 @@
 .remote, .local {
   position: relative;
   /* border: 1px dotted #4000c7; */
-  border-left: 28px solid #c5caec52;
+  border-left: 28px solid #c5caec77;
 
   /* border-radius: 8px; */
   padding: 10px;
@@ -50,12 +50,12 @@ hr {
 
 .remote {
   height: 250px;
-  background-color: #c5caec52;
+  background-color: #c5caec34;
 }
 
 .local {
-  height: 300px;
-  background-color: #ffffff;
+  height: 322px;
+  background-color: #f0f0f0;
 }
 
 .area_box {
@@ -70,7 +70,7 @@ hr {
 .staging {
   border: 1px solid #c5caec;
   height: 70px;
-  margin-bottom: 2px;
+  /* margin-bottom: 2px; */
 }
 
 .untracked {
@@ -80,7 +80,7 @@ hr {
 
 .stash {
   border: 1px solid #c5caec;
-  height: 142px;
+  height: 150px;
 }
 
 .remote_ch3 {
@@ -126,7 +126,7 @@ img {
   justify-content: center;
   align-items: center;
   width: 800px;
-  margin: 10px;
+  /* margin: 10px; */
 }
 
 .right {
@@ -134,9 +134,9 @@ img {
   justify-content: center;
   align-items: center;
   width: 340px;
-  margin-right: 10px;
+  /* margin-right: 10px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 10px; */
 }
 
 .file {

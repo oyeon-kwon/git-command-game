@@ -4,7 +4,7 @@ import questions from '../questions.json';
 import Modal from './Modal';
 import { useHistory } from 'react-router-dom';
 
-function Terminal(props) {
+function Terminal (props) {
   const currentChapter = Number(props.currentChapter);
   const currentStep = Number(props.currentStep);
   const history = useHistory();

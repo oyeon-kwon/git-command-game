@@ -21,9 +21,15 @@ function Nav (props) {
   return (
     <div className='nav'>
       <div className='nav_title'>
-        Chapter {questions[String(currentChapter)][currentStep - 1].chapter} ( {questions[currentChapter][currentStep - 1].number} / {questions[currentChapter].length} )
-        <button className='back_btn' onClick={backHandler}>Back</button>
+        Chapter {questions[String(currentChapter)][currentStep - 1].chapter}
+        {/* ( {questions[currentChapter][currentStep - 1].number} / {questions[currentChapter].length} ) */}
+        {/* <button className='back_btn' onClick={backHandler}>Back</button> */}
       </div>
+      <ol>
+        {
+          questions[currentChapter].map(q => <li>{q.title}</li>)
+        }
+      </ol>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Repository(props) {
+function Repository (props) {
   return (
     <>
       <div className={`area_box ${props.title}`}>
