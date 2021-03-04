@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Repository (props) {
+function Repository(props) {
   return (
     <>
-      <div className={props.title}>
+      <div className={`area_box ${props.title}`}>
         <div className='visual_third_title'>{props.title}</div>
       </div>
     </>
