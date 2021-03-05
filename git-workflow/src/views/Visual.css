@@ -1,6 +1,5 @@
 .visual_container {
   flex: 0 0 auto;
-  /* height: 410px; */
   position: relative;
 }
 
@@ -15,32 +14,25 @@
   font-size: 0.8rem;
   transform: rotate(270deg);
   transform-origin: 0 0;
-  /* background-color: #4000c7; */
   color: #4000c7;
   position: absolute;
   bottom: 0;
   left: -21px;
   font-weight: 500;
-  /* border-radius: 7px 0 0 0; */
 }
 
 .visual_third_title {
-  /* background-color: #c5caec; */
   border-bottom: 2px solid orange;
   display: inline-block;
   font-size: 0.8rem;
   letter-spacing: 1px;
   font-weight: 500;
   margin-left: 10px;
-  /* width: 100%; */
 }
 
 .remote, .local {
   position: relative;
-  /* border: 1px dotted #4000c7; */
   border-left: 28px solid #c5caec77;
-
-  /* border-radius: 8px; */
   padding: 10px;
 }
 
@@ -70,7 +62,6 @@ hr {
   border: 1px solid #c5caec;
   background-color: #ffffff;
   width: calc(100% - 20px);
-  /* height: 100px; */
   flex: 1 0 auto;
   margin: 10px;
   border-radius: 1rem;
@@ -79,7 +70,6 @@ hr {
 .staging {
   border: 1px solid #c5caec;
   height: 70px;
-  /* margin-bottom: 2px; */
 }
 
 .untracked {
@@ -135,7 +125,6 @@ hr {
   justify-content: center;
   align-items: center;
   width: 800px;
-  /* margin: 10px; */
 }
 
 .right {
@@ -143,15 +132,11 @@ hr {
   justify-content: center;
   align-items: center;
   width: 340px;
-  /* margin-right: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px; */
 }
 
 .file {
   color: crimson;
 }
-
 
 .github_logo {
   margin-left: 47%;
@@ -169,177 +154,6 @@ svg {
 
 .show_commit {
   animation: boxFade 1s linear alternate;
-}
-
-.ch1_3 {
-  position: absolute;
-  margin-top: 510px;
-}
-
-.ch1_4_1 {
-  position: absolute;
-  margin-top: 435px;
-}
-
-.ch1_4_2 {
-  position: absolute;
-  margin-top: 295px;
-  margin-left: 70px;
-}
-
-.ch1_5 {
-  position: absolute;
-  margin-top: 295px;
-  margin-left: 70px;
-}
-
-.ch2_5 {
-  position: absolute;
-  margin-top: 58px;
-}
-
-.ch2_6 {
-  position: absolute;
-  margin-top: 445px;
-}
-
-.ch3_1 {
-  position: absolute;
-  margin-top: 180px;
-}
-
-.ch3_2_1 {
-  position: absolute;
-  margin-top: 180px;
-}
-
-.ch3_2_2 {
-  position: absolute;
-  margin-top: 138px;
-  margin-left: 238px;
-}
-
-.ch3_3 {
-  position: absolute;
-  margin-top: 140px;
-}
-
-.ch3_4_1 {
-  position: absolute;
-  margin-top: 95px;
-  margin-left: 300px;
-}
-
-.ch3_4_2 {
-  position: absolute;
-  margin-top: 140px;
-
-}
-
-.ch3_5 {
-  position: absolute;
-  margin-top: 100px;
-}
-
-.ch3_6 {
-  position: absolute;
-  margin-top: 100px;
-}
-
-.ch3_7_1 {
-  position: absolute;
-  margin-top: 100px;
-}
-
-.ch3_7_2 {
-  position: absolute;
-  margin-left: 283px;
-  margin-top: 160px;
-}
-
-.ch4_1_1 {
-  position: absolute;
-  margin-top: 70px;
-}
-
-.ch4_1_2 {
-  position: absolute;
-  margin-top: 180px;
-}
-
-.ch4_1_3 {
-  position: absolute;
-  margin-top: 360px;
-}
-
-.ch4_2 {
-  position: absolute;
-  margin-top: 185px;
-  margin-left: 325px;
-}
-
-.ch4_3_1 {
-  position: absolute;
-  margin-top: 70px;
-}
-
-.ch4_3_2 {
-  position: absolute;
-  margin-top: 180px;
-}
-
-.ch4_3_3 {
-  position: absolute;
-  margin-top: 360px;
-}
-
-.ch4_3_4 {
-  position: absolute;
-  margin-top: 100px;
-  margin-left: 326px;
-}
-
-.ch4_4_2 {
-  position: absolute;
-  margin-top: 513px;
-}
-
-.ch4_4_3 {
-  position: absolute;
-  margin-top: 315px;
-  margin-left: 300px;
-}
-
-.ch4_5 {
-  position: absolute;
-  margin-top: 440px;
-}
-
-.ch4_6 {
-  position: absolute;
-  margin-top: 80px;
-}
-
-.ch4_7 {
-  position: absolute;
-  margin-top: 80px;
-}
-
-.ch4_8_1 {
-  position: absolute;
-  margin-top: 80px;
-}
-
-.ch4_8_2 {
-  position: absolute;
-  margin-top: 325px;
-  margin-left: 345px;
-}
-
-.ch4_9 {
-  position: absolute;
-  margin-top: 86px;
-  margin-left: 345px;
 }
 
 @keyframes boxFade {
