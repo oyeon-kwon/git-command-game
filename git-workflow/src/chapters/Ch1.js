@@ -16,53 +16,53 @@ function Ch1 (props) {
   return (
     <div className='visual_container'>
       {
-    currentStep === 1
-      ? <>
-        <img src={githubLogo} className='github_logo' alt='git' />
-      </>
-      : currentStep === 2
-        ? <>
-          <Remote effect='show_commit' remoteStatus='true' />
-          <Local effect='show_commit' localStatus='false' />
-        </>
-        : currentStep === 3
+        currentStep === 1
           ? <>
-            <img src={ch1_3} className='show_commit' />
-            <Remote remoteStatus='true' />
-            <Local localStatus='true' effect='show_commit' />
+            <Remote effect='show_commit' remoteStatus='origin-only' />
           </>
-          : currentStep === 4
+          : currentStep === 2
             ? <>
-              <img src={ch1_4} />
-              <Remote remoteStatus='true' className='show_commit' />
-              <Local localStatus='true' />
+              <Remote effect='show_commit' remoteStatus='origin-only' />
+              <Local effect='show_commit' localStatus='false' />
             </>
-            : currentStep === 5
+            : currentStep === 3
               ? <>
-                <img src={ch1_5} />
-                <Remote remoteStatus='true' className='show_commit' />
-                <Local localStatus='true' />
+                <img src={ch1_3} className='show_commit' />
+                <Remote remoteStatus='origin-only' />
+                <Local localStatus='true' effect='show_commit' />
               </>
-              : currentStep === 6
+              : currentStep === 4
                 ? <>
-                  <img src={ch1_6} className='show_commit' />
-                  <Remote remoteStatus='true' />
+                  <img src={ch1_4} />
+                  <Remote remoteStatus='origin-only' className='show_commit' />
                   <Local localStatus='true' />
                 </>
-                : currentStep === 7
+                : currentStep === 5
                   ? <>
-                    <img src={ch1_7} className='show_commit' />
-                    <Remote remoteStatus='true' />
+                    <img src={ch1_5} />
+                    <Remote remoteStatus='origin-only' className='show_commit' />
                     <Local localStatus='true' />
                   </>
-                  : currentStep === 8
+                  : currentStep === 6
                     ? <>
-                      <img src={ch1_8} className='show_commit' />
-                      <Remote remoteStatus='true' />
+                      <img src={ch1_6} className='show_commit' />
+                      <Remote remoteStatus='origin-only' />
                       <Local localStatus='true' />
                     </>
-                    : null
-    }
+                    : currentStep === 7
+                      ? <>
+                        <img src={ch1_7} className='show_commit' />
+                        <Remote remoteStatus='origin-only' />
+                        <Local localStatus='true' />
+                      </>
+                      : currentStep === 8
+                        ? <>
+                          <img src={ch1_8} className='show_commit' />
+                          <Remote remoteStatus='origin-only' />
+                          <Local localStatus='true' />
+                        </>
+                        : null
+      }
     </div>
   );
 }

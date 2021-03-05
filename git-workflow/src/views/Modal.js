@@ -13,7 +13,7 @@ function Modal (props) {
     <>
       {
         labelOK === 'Continue'
-          ? <div className='modal_t'>
+          ? <div className='modal_backdrop'>
             <div className='modal_content'>
               <span className='close' onClick={retryHandler}>&times;</span>
               <div className='modal_description'>
@@ -23,7 +23,7 @@ function Modal (props) {
             </div>
           </div>
           : labelOK === 'Try Again'
-            ? <div className='modal_f'>
+            ? <div className='modal_backdrop'>
               <div className='modal_content'>
                 <span className='close' onClick={retryHandler}>&times;</span>
                 <div className='modal_description'>
