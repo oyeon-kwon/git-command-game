@@ -9,7 +9,7 @@ function Start () {
 
   return (
     <div className='start_body'>
-      <img src={logo} className='logo' alt='logo' />
+      <div className='logo'><img src={logo} alt='logo' className='logoImg' /></div>
       <h1>Git Commands <br /> Checkpoint</h1>
       <div className='start_description'>
         Git Commands 체크포인트에 오신 것을 환영합니다!<br />

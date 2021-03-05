@@ -9,6 +9,9 @@ import ch1_5 from '../imgs/ch1/ch1_5.svg';
 import ch1_6 from '../imgs/ch1/ch1_6.svg';
 import ch1_7 from '../imgs/ch1/ch1_7.svg';
 import ch1_8 from '../imgs/ch1/ch1_8.svg';
+import ch1_9_1 from '../imgs/ch1/ch1_9_1.svg';
+import ch1_9_2 from '../imgs/ch1/ch1_9_2.svg';
+import ch1_10 from '../imgs/ch1/ch1_10.svg';
 
 function Ch1 (props) {
   const currentStep = props.currentStep;
@@ -61,6 +64,19 @@ function Ch1 (props) {
                           <Remote remoteStatus='origin-only' />
                           <Local localStatus='true' />
                         </>
+                        : currentStep === 9
+                        ? <>
+                          <img src={ch1_9_1} />
+                          <img src={ch1_9_2} className='show_commit' />
+                          <Remote remoteStatus='origin-only' />
+                          <Local localStatus='true' />
+                        </>
+                          : currentStep === 10
+                          ? <>
+                            <img src={ch1_10} />
+                            <Remote remoteStatus='origin-only' />
+                            <Local localStatus='true' />
+                          </>
                         : null
       }
     </div>
