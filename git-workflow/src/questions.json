@@ -5,7 +5,7 @@
             "title": "repository 가져오기",
             "number": 1,
             "description": "# 김코딩이는 fork한 codestates 깃헙 리파지토리를 본인의 local에서 작업하려고 합니다. 복사한 깃헙 리파지토리 주소는 https://github.com/codestates/test 입니다.",
-            "terminal_guide": "Cloning into 'im-sprint-twittler-react'... \n remote: Enumerating objects: 3, done. \n remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 3 Unpacking objects: 100% (3/3), done.",
+            "terminal_guide": "Cloning into 'im-sprint-git-workflow'... \n remote: Enumerating objects: 3, done. \n remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 3 Unpacking objects: 100% (3/3), done.",
             "answer": [
                 "git clone https://github.com/codestates/test"
             ]
@@ -15,14 +15,14 @@
             "title": "상태 확인",
             "number": 2,
             "description": "# local working directory에서 index.js 파일을 추가했습니다. 기존과 변경된 파일들이 어떤 것이 있는지 확인해 보려고 합니다.",
-            "terminal_guide": "On branch main. \n Your branch is up to date with 'origin/main'. \n nothing to commit, working tree clean",
+            "terminal_guide": "On branch main. \n Untracked files: \n (use 'git add <file>...' to include in what will be committed) \n index.html \n nothing added to commit but untracked files present (use 'git add' to track)",
             "answer": [
                 "git status"
             ]
         },
         {
             "chapter": "1. 혼자 작업",
-            "title": "Staging area: 버전 관리하에 둠",
+            "title": "Staging area: 버전 관리하에 둠 1",
             "number": 3,
             "description": "# local 의 index.js 파일을 staging area로 옮기려고 합니다.",
             "terminal_guide": "",
@@ -34,25 +34,27 @@
         },
         {
             "chapter": "1. 혼자 작업",
-            "title": "commit",
+            "title": "commit 1",
             "number": 4,
-            "description": "# 내 깃헙 리파지토리에 'first commit' 이라고 커밋 기록을 남기려고 합니다.",
+            "description": "# 내 깃헙 리파지토리에 'index.js 수정' 이라고 커밋 기록을 남기려고 합니다.",
             "terminal_guide": "[main 2a4535f] completed 1 files changed, \n 123 insertions(+) create mode 100644 index.js",
-            "answer": "git commit -m 'first commit'"
+            "answer": "git commit -m 'index.js 수정'"
         },
         {
             "chapter": "1. 혼자 작업",
             "title": "commit 취소",
             "number": 5,
             "description": "# 앗.. index.js 파일에서 오타를 발견했어요. 수정을 해야하는데 불필요한 커밋을 또 하고 싶지는 않습니다. 커밋한 기록을 되돌려서 이전으로 돌아가는 방법은 없을까요?",
-            "terminal_guide": "commit 2a4535fec5934268a2bb5e41cd81a488891f02fb (HEAD -> main, origin/main, origin/HEAD) Author: kimcoding <kimcoding@gmail.com> Date:   Tue Feb 16 13:13:56 2021 +0900 completed",
+            "terminal_guide": "Unstaged changes after reset: \n M   index.js",
             "answer": [
-                "git reset HEAD~1"
+                "git reset HEAD~1",
+                "git reset HEAD^1",
+                "git reset HEAD^"
             ]
         },
         {
             "chapter": "1. 혼자 작업",
-            "title": "Staging area: 버전 관리하에 둠",
+            "title": "Staging area: 버전 관리하에 둠 2",
             "number": 6,
             "description": "# 수정을 완료했어요! 다시 index.js 파일을 staging area로 옮겨볼까요?",
             "terminal_guide": "",
@@ -64,18 +66,18 @@
         },
         {
             "chapter": "1. 혼자 작업",
-            "title": "commit",
+            "title": "commit 2",
             "number": 7,
-            "description": "# 아까와 같이 ‘first commit’ 이라는 메시지로 커밋 기록을 남겨봅시다.",
-            "terminal_guide": "[main 2a4535f] completed 1 files changed, \n 123 insertions(+) create mode 100644 index.js",
-            "answer": "git commit -m 'first commit'"
+            "description": "# 아까와 같이 ‘index.js 수정’ 이라는 메시지로 커밋 기록을 남겨봅시다.",
+            "terminal_guide": "[main 6b4395c] completed 1 files changed, \n 123 insertions(+) create mode 100644 index.js",
+            "answer": "git commit -m 'index.js 수정'"
         },
         {
             "chapter": "1. 혼자 작업",
-            "title": "업로드",
+            "title": "push",
             "number": 8,
             "description": "# 내 깃헙 origin 리파지토리의 main으로 푸쉬합니다.",
-            "terminal_guide": "Enumerating objects: 1, done. \n Counting objects: 100% (1/1), done. \n Delta compression using up to 1 threads. \n Compressing objects: 100% (1/1), done. \n Writing objects: 100% (1/1), 212.65 KiB | 10.63 MiB/s, done. \n Total 1 (delta 0), reused 0 (delta 0). To https://github.com/codestates/test 9ec18c7..2a4535f  main -> main",
+            "terminal_guide": "Enumerating objects: 1, done. \n Counting objects: 100% (1/1), done. \n Delta compression using up to 1 threads. \n Compressing objects: 100% (1/1), done. \n Writing objects: 100% (1/1), 212.65 KiB | 10.63 MiB/s, done. \n Total 1 (delta 0), reused 0 (delta 0). To https://github.com/codestates/test 9ec18c7..6b4395c  main -> main",
             "answer": [
                 "git push origin main"
             ]
@@ -85,7 +87,7 @@
             "title": "로그 보기",
             "number": 9,
             "description": "# 내 커밋 로그를 확인하는 명령어를 입력해보세요.",
-            "terminal_guide": "commit 2a4535fec5934268a2bb5e41cd81a488891f02fb (HEAD -> main, origin/main, origin/HEAD) \n Author: kimcoding <kimcoding@gmail.com> \n Date:   Tue Feb 16 13:13:56 2021 +0900 \n completed",
+            "terminal_guide": "commit 6b4395cec5934268a2bb5e41cd81a488891f02fb (HEAD -> main, origin/main, origin/HEAD) \n Author: kimcoding <kimcoding@gmail.com> \n Date:   Tue Feb 16 13:13:56 2021 +0900 \n completed",
             "answer": [
                 "git log"
             ]
