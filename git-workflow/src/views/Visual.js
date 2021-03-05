@@ -21,7 +21,7 @@ function Visual (props) {
       {
       currentChapter === 1
         ? <Ch1 currentStep={currentStep} />
-          : null
+        : null
     }
     </>
   );

@@ -41,7 +41,7 @@ function Ch1 (props) {
                 </>
                 : currentStep === 5
                   ? <>
-                    <img src={ch1_5} className='svg'/>
+                    <img src={ch1_5} className='svg' />
                     <Remote remoteStatus='origin-only' className='show_commit' />
                     <Local localStatus='true' />
                   </>
@@ -64,19 +64,19 @@ function Ch1 (props) {
                           <Local localStatus='true' />
                         </>
                         : currentStep === 9
-                        ? <>
-                          <img src={ch1_9_1} />
-                          <img src={ch1_9_2} className='svg show_commit' />
-                          <Remote remoteStatus='origin-only' />
-                          <Local localStatus='true' />
-                        </>
-                          : currentStep === 10
                           ? <>
-                            <img src={ch1_10} className='svg' />
+                            <img src={ch1_9_1} />
+                            <img src={ch1_9_2} className='svg show_commit' />
                             <Remote remoteStatus='origin-only' />
                             <Local localStatus='true' />
-                          </>
-                        : null
+                            </>
+                          : currentStep === 10
+                            ? <>
+                              <img src={ch1_10} className='svg' />
+                              <Remote remoteStatus='origin-only' />
+                              <Local localStatus='true' />
+                              </>
+                            : null
       }
     </div>
   );
