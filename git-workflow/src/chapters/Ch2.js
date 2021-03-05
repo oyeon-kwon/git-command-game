@@ -28,19 +28,19 @@ function Ch2 (props) {
             </>
             : currentStep === 4
               ? <>
-                <img src={ch2_4} className='show_commit' />
+                <img src={ch2_4} className='svg show_commit' />
                 <Remote remoteStatus='true' />
                 <Local localStatus='true' />
               </>
               : currentStep === 5
                 ? <>
-                  <img src={ch2_5} className='show_commit' />
+                  <img src={ch2_5} className='svg show_commit' />
                   <Remote remoteStatus='true' />
                   <Local localStatus='true' />
                 </>
                 : currentStep === 6
                   ? <>
-                    <img src={ch2_6} className='show_commit' />
+                    <img src={ch2_6} className='svg show_commit' />
                     <Remote remoteStatus='true' />
                     <Local localStatus='true' />
                   </>

@@ -20,45 +20,45 @@ function Ch3 (props) {
       {
     currentStep === 1
       ? <>
-        <img src={ch3_1} className='show_commit' />
+        <img src={ch3_1} className='svg show_commit' />
         <Remote ch3='remote_ch3' remoteStatus='false' />
         <Local ch3='local_ch3' localStatus='true' />
       </>
       : currentStep === 2
         ? <>
-          <img src={ch3_2} className='show_commit' />
+          <img src={ch3_2} className='svg show_commit' />
           <Remote ch3='remote_ch3' remoteStatus='false' />
           <Local ch3='local_ch3' localStatus='true' />
         </>
         : currentStep === 3
           ? <>
-            <img src={ch3_3} className='show_commit' />
+            <img src={ch3_3} className='svg show_commit' />
             <Remote ch3='remote_ch3' remoteStatus='false' />
             <Local ch3='local_ch3' localStatus='true' />
           </>
           : currentStep === 4
             ? <>
-              <img src={ch3_4_1} className='show_commit' />
-              <img src={ch3_4_2} className='show_commit' />
+              <img src={ch3_4_1} className='svg show_commit' />
+              <img src={ch3_4_2} className='svg show_commit' />
               <Remote ch3='remote_ch3' remoteStatus='false' />
               <Local ch3='local_ch3' localStatus='true' />
             </>
             : currentStep === 5
               ? <>
-                <img src={ch3_5} className='show_commit' />
+                <img src={ch3_5} className='svg show_commit' />
                 <Remote ch3='remote_ch3' remoteStatus='false' />
                 <Local ch3='local_ch3' localStatus='true' />
               </>
               : currentStep === 6
                 ? <>
-                  <img src={ch3_6} className='show_commit' />
+                  <img src={ch3_6} className='svg show_commit' />
                   <Remote ch3='remote_ch3' remoteStatus='false' />
                   <Local ch3='local_ch3' localStatus='true' />
                 </>
                 : currentStep === 7
                   ? <>
-                    <img src={ch3_7_1} className='show_commit' />
-                    <img src={ch3_7_2} className='show_commit' />
+                    <img src={ch3_7_1} className='svg show_commit' />
+                    <img src={ch3_7_2} className='svg show_commit' />
                     <Remote ch3='remote_ch3' remoteStatus='false' />
                     <Local ch3='local_ch3' localStatus='true' />
                   </>

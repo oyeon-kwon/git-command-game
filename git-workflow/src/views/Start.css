@@ -21,7 +21,7 @@
 }
 
 h1 {
-  margin-top: 5rem;
+  margin-top: 3rem;
   font-family: Pacifico;
   text-align: center;
   font-size: calc(3rem + 0.25vw + 0.5vh);
@@ -29,7 +29,7 @@ h1 {
 }
 
 .start_description {
-  margin-top: 8rem;
+  margin-top: 5rem;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 100;
@@ -44,7 +44,7 @@ h1 {
   width: 15rem;
   height: 5rem;
   display: block;
-  margin: 7rem auto;
+  margin: 6rem auto;
   border: 0;
   outline: 0;
   font-family: Pacifico;
