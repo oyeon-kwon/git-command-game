@@ -10,7 +10,7 @@ function End () {
   return (
     <>
       <div className='end_body'>
-        <img src={logo} className='logo' alt='logo' />
+        <div className='logo'><img src={logo} alt='logo' className='logoImg' /></div>
         <div className='ending_title'>Git job!</div>
         <div className='start_description'>
           수고하셨습니다.<br />
