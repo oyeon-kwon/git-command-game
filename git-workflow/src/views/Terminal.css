@@ -2,7 +2,6 @@
 
 .terminal {
   border-radius: 8px;
-  /* background-color: rgb(206, 206, 206); */
   background-color: #333;
   margin: 10px;
   overflow: hidden;
@@ -54,14 +53,12 @@
 }
 
 .question_description {
-  /* color: #4c56a1; */
   color: #ccc;
   margin: 20px;
   flex: 0 1 50px;
 }
 
 .terminal_guide {
-  /* color:rgb(68, 179, 63); */
   color: white;
   font-family: 'Courier New', Courier, monospace;
   margin: 0 20px;
@@ -86,6 +83,22 @@
   font-size: 20px;
   border: none;
   background: transparent;
+}
+
+.hint_btn {
+  border-radius: 40px;
+  background-color: #4c56a1;
+  margin: 0 5px;
+  color: white;
+  flex: 0 1 50px;
+  font-size: 13px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.hint_btn:hover {
+  background-color: white;
+  color: #4c56a1;
 }
 
 .enter_btn {
