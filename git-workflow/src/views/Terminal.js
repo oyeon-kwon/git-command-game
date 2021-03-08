@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Terminal.css';
 import questions from '../questions.json';
 import Modal from './Modal';
+import Hint from './Hint';
 import { useHistory } from 'react-router-dom';
 
 function Terminal (props) {
@@ -11,6 +12,7 @@ function Terminal (props) {
 
   const [correct, isCorrect] = useState('none');
   const [inputValue, setInputValue] = useState('');
+  const [hint, isHint] = useState(false);
 
   const checkAnswerHandler = () => {
     if (questions[props.currentChapter][currentStep - 1].answer.indexOf(inputValue) === -1) {
@@ -58,6 +60,10 @@ function Terminal (props) {
     isCorrect('false');
   };
 
+  const viewHintHandler = () => {
+    isHint(!hint);
+  };
+
   return (
     <div className='terminal'>
       <div className='bar'>
@@ -75,9 +81,15 @@ function Terminal (props) {
             ? questions[String(currentChapter)][currentStep - 1].terminal_guide
             : null
         }
+        {
+          hint === true
+            ? <Hint currentChapter={currentChapter} currentStep={currentStep} />
+            : null
+        }
       </pre>
       <div className='input_line'>
         <input onChange={inputHandler} onKeyPress={onEnterPress} className='input' value={inputValue} placeholder='여기에 명령어를 입력하세요.' autoFocus />
+        <span className='hint_btn' onMouseOver={viewHintHandler} onMouseOut={viewHintHandler}>Hint</span>
         <button onClick={checkAnswerHandler} className='enter_btn'>Enter</button>
       </div>
       {

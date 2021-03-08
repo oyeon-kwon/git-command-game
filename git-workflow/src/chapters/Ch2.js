@@ -4,7 +4,6 @@ import Remote from './layouts/Remote';
 import Local from './layouts/Local';
 import ch2_4 from '../imgs/ch2/ch2_4.svg';
 import ch2_5 from '../imgs/ch2/ch2_5.svg';
-import ch2_6 from '../imgs/ch2/ch2_6.svg';
 
 function Ch2 (props) {
   const currentStep = props.currentStep;
@@ -38,13 +37,7 @@ function Ch2 (props) {
                   <Remote remoteStatus='true' />
                   <Local localStatus='true' />
                 </>
-                : currentStep === 6
-                  ? <>
-                    <img src={ch2_6} className='svg show_commit' />
-                    <Remote remoteStatus='true' />
-                    <Local localStatus='true' />
-                  </>
-                  : null
+                : null
     }
     </div>
   );

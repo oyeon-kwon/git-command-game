@@ -26,21 +26,10 @@ li {
   border-bottom: 1px dotted #7b86d3;
 }
 
-.back_btn {
-  background-color: #c5caec;
-  color: #4c56a1;
-  border-radius: 2rem;
-  width: 50px;
-  padding-left: 2px;
-  margin-left: 10px;
-  border: 0;
-  outline: 0;
-  height: 20px;
-  align-items: center;
-  font-size: 10px;
+li:hover {
+  cursor: pointer;
 }
 
-.back_btn:hover {
-  background-color: #4000c7;
-  color: white;
+.current_tab {
+  color: rgb(255, 230, 0)
 }

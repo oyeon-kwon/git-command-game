@@ -88,6 +88,22 @@
   background: transparent;
 }
 
+.hint_btn {
+  border-radius: 40px;
+  background-color: #4c56a1;
+  margin: 0 5px;
+  color: white;
+  flex: 0 1 50px;
+  font-size: 13px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.hint_btn:hover {
+  background-color: white;
+  color: #4c56a1;
+}
+
 .enter_btn {
   flex: 0 1 100px;
   height: 30px;

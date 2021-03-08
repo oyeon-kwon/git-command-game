@@ -1,11 +1,13 @@
 {
+    
     "1": [
         {
             "chapter": "1. 혼자 작업",
             "title": "repository 가져오기",
             "number": 1,
             "description": "# 김코딩이는 fork한 codestates 깃헙 리파지토리를 본인의 local에서 작업하려고 합니다. 복사한 깃헙 리파지토리 주소는 https://github.com/codestates/test 입니다.",
-            "terminal_guide": "Cloning into 'im-sprint-twittler-react'... \n remote: Enumerating objects: 3, done. \n remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 3 Unpacking objects: 100% (3/3), done.",
+            "terminal_guide": "Cloning into 'im-sprint-git-workflow'... \n remote: Enumerating objects: 3, done. \n remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 3 Unpacking objects: 100% (3/3), done.",
+            "hint":"clone 명령어를 사용할 수 있어요",
             "answer": [
                 "git clone https://github.com/codestates/test"
             ]
@@ -15,17 +17,19 @@
             "title": "상태 확인",
             "number": 2,
             "description": "# local working directory에서 index.js 파일을 추가했습니다. 기존과 변경된 파일들이 어떤 것이 있는지 확인해 보려고 합니다.",
-            "terminal_guide": "On branch main. \n Your branch is up to date with 'origin/main'. \n nothing to commit, working tree clean",
+            "terminal_guide": "On branch main. \n Untracked files: \n (use 'git add <file>...' to include in what will be committed) \n index.js \n nothing added to commit but untracked files present (use 'git add' to track)",
+            "hint":"status 명령어를 사용할 수 있어요",
             "answer": [
                 "git status"
             ]
         },
         {
             "chapter": "1. 혼자 작업",
-            "title": "Staging area: 버전 관리하에 둠",
+            "title": "Staging area: 버전 관리하에 둠 1",
             "number": 3,
             "description": "# local 의 index.js 파일을 staging area로 옮기려고 합니다.",
             "terminal_guide": "",
+            "hint":"파일을 staging area로 더한다는 의미의 명령어를 입력해 보세요",
             "answer": [
                 "git add index.js",
                 "git add ./index.js",
@@ -34,28 +38,33 @@
         },
         {
             "chapter": "1. 혼자 작업",
-            "title": "commit",
+            "title": "commit 1",
             "number": 4,
-            "description": "# 내 깃헙 리파지토리에 'first commit' 이라고 커밋 기록을 남기려고 합니다.",
+            "description": "# 내 깃헙 리파지토리에 'index.js 수정' 이라고 커밋 기록을 남기려고 합니다.",
             "terminal_guide": "[main 2a4535f] completed 1 files changed, \n 123 insertions(+) create mode 100644 index.js",
-            "answer": "git commit -m 'first commit'"
+            "hint":"commit을 할 때, -m 옵션을 통해 코멘트를 남길 수 있어요",
+            "answer": "git commit -m 'index.js 수정'"
         },
         {
             "chapter": "1. 혼자 작업",
             "title": "commit 취소",
             "number": 5,
             "description": "# 앗.. index.js 파일에서 오타를 발견했어요. 수정을 해야하는데 불필요한 커밋을 또 하고 싶지는 않습니다. 커밋한 기록을 되돌려서 이전으로 돌아가는 방법은 없을까요?",
-            "terminal_guide": "commit 2a4535fec5934268a2bb5e41cd81a488891f02fb (HEAD -> main, origin/main, origin/HEAD) Author: kimcoding <kimcoding@gmail.com> Date:   Tue Feb 16 13:13:56 2021 +0900 completed",
+            "terminal_guide": "Unstaged changes after reset: \n M   index.js",
+            "hint":"reset 명령어를 활용해 최근 1개의 커밋만 삭제하세요\n여기서 soft/hard 는 사용하지 않습니다",
             "answer": [
-                "git reset HEAD~1"
+                "git reset HEAD~1",
+                "git reset HEAD^1",
+                "git reset HEAD^"
             ]
         },
         {
             "chapter": "1. 혼자 작업",
-            "title": "Staging area: 버전 관리하에 둠",
+            "title": "Staging area: 버전 관리하에 둠 2",
             "number": 6,
             "description": "# 수정을 완료했어요! 다시 index.js 파일을 staging area로 옮겨볼까요?",
             "terminal_guide": "",
+            "hint":"파일을 staging area로 더한다는 의미의 명령어를 입력해 보세요",
             "answer": [
                 "git add index.js",
                 "git add ./index.js",
@@ -64,18 +73,20 @@
         },
         {
             "chapter": "1. 혼자 작업",
-            "title": "commit",
+            "title": "commit 2",
             "number": 7,
-            "description": "# 아까와 같이 ‘first commit’ 이라는 메시지로 커밋 기록을 남겨봅시다.",
-            "terminal_guide": "[main 2a4535f] completed 1 files changed, \n 123 insertions(+) create mode 100644 index.js",
-            "answer": "git commit -m 'first commit'"
+            "description": "# 아까와 같이 ‘index.js 수정’ 이라는 메시지로 커밋 기록을 남겨봅시다.",
+            "terminal_guide": "[main 6b4395c] completed 1 files changed, \n 123 insertions(+) create mode 100644 index.js",
+            "hint":"commit을 할 때, -m 옵션을 통해 코멘트를 남길 수 있어요",
+            "answer": "git commit -m 'index.js 수정'"
         },
         {
             "chapter": "1. 혼자 작업",
-            "title": "업로드",
+            "title": "push",
             "number": 8,
             "description": "# 내 깃헙 origin 리파지토리의 main으로 푸쉬합니다.",
-            "terminal_guide": "Enumerating objects: 1, done. \n Counting objects: 100% (1/1), done. \n Delta compression using up to 1 threads. \n Compressing objects: 100% (1/1), done. \n Writing objects: 100% (1/1), 212.65 KiB | 10.63 MiB/s, done. \n Total 1 (delta 0), reused 0 (delta 0). To https://github.com/codestates/test 9ec18c7..2a4535f  main -> main",
+            "terminal_guide": "Enumerating objects: 1, done. \n Counting objects: 100% (1/1), done. \n Delta compression using up to 1 threads. \n Compressing objects: 100% (1/1), done. \n Writing objects: 100% (1/1), 212.65 KiB | 10.63 MiB/s, done. \n Total 1 (delta 0), reused 0 (delta 0). To https://github.com/codestates/test 9ec18c7..6b4395c  main -> main",
+            "hint":"remote origin의 해당 branch에 push하세요",
             "answer": [
                 "git push origin main"
             ]
@@ -85,7 +96,8 @@
             "title": "로그 보기",
             "number": 9,
             "description": "# 내 커밋 로그를 확인하는 명령어를 입력해보세요.",
-            "terminal_guide": "commit 2a4535fec5934268a2bb5e41cd81a488891f02fb (HEAD -> main, origin/main, origin/HEAD) \n Author: kimcoding <kimcoding@gmail.com> \n Date:   Tue Feb 16 13:13:56 2021 +0900 \n completed",
+            "terminal_guide": "commit 6b4395cec5934268a2bb5e41cd81a488891f02fb (HEAD -> main, origin/main, origin/HEAD) \n Author: kimcoding <kimcoding@gmail.com> \n Date:   Tue Feb 16 13:13:56 2021 +0900 \n completed",
+            "hint":"log 명령어를 통해 터미널 창에서 커밋 로그를 확인할 수 있어요",
             "answer": [
                 "git log"
             ]
@@ -96,11 +108,12 @@
             "number": 10,
             "description": "# enter 버튼을 통해 'Chapter1. 혼자 작업' 퀴즈를 완료합니다.",
             "terminal_guide": "",
+            "hint":"nice :)",
             "answer": [
                 ""
-            ]
-        }
-    ],
+            ]}
+    ]
+,
     "2": [
         {
             "chapter": "2. 함께 작업",
@@ -108,6 +121,7 @@
             "number": 1,
             "description": "# 김코딩은 local working directory를 Git의 관리 하에 들어가게 해 주려고 합니다.",
             "terminal_guide": "Initialized empty Git repository in /Users/kimcoding/Desktop/test/.git/",
+            "hint":"초기 세팅을 뜻하는 명령어 입니다",
             "answer": [
                 "git init"
             ]
@@ -118,6 +132,7 @@
             "number": 2,
             "description": "# 김코딩은 페어 프로그래밍을 위해서 페어의 리모트 리파지토리를 본인의 로컬과 연결하려 합니다. 페어의 이름은 pair 로 지정하세요. 리파지토리 링크는 https://github.com/pair/test 입니다.",
             "terminal_guide": "",
+            "hint":"pair의 깃헙 주소를 add 하세요",
             "answer": [
                 "git remote add pair https://github.com/pair/test"
             ]
@@ -128,6 +143,7 @@
             "number": 3,
             "description": "# 리모트 리파지토리가 잘 연결된 것이 맞는지 모르겠어요. 연결된 리모트 리파지토리의 목록들을 확인해 볼까요?",
             "terminal_guide": "origin https://github.com/kimcoding/test (fetch) \n origin https://github.com/kimcoding/test (push) \n pair https://github.com/pair/test (fetch) \n pair https://github.com/pair/test (push)",
+            "hint":"remote의 verbose 옵션으로 확인할 수 있어요",
             "answer": [
                 "git remote -v"
             ]
@@ -138,26 +154,18 @@
             "number": 4,
             "description": "# 페어가 작업해서 main 브랜치에 커밋해 놓은 내용을 내 로컬 리파지토리로 가져오려고 합니다.",
             "terminal_guide": "",
+            "hint":"pair의 main 브랜치 내용을 받아오세요",
             "answer": [
                 "git pull pair main"
             ]
         },
         {
             "chapter": "2. 함께 작업",
-            "title": "보관하기",
-            "number": 5,
-            "description": "# 내 로컬 리파지토리 파일에서 이것 저것 시도를 해보는 중에 페어가 새로운 부분을 업데이트 했다고 합니다. 내가 건드린 부분을 커밋하긴 애매하니 잠시 다른 공간에 저장해 둘 방법이 있을까요?",
-            "terminal_guide": "Saved working directory and index state WIP on main: 6dbad99",
-            "answer": [
-                "git stash"
-            ]
-        },
-        {
-            "chapter": "2. 함께 작업",
             "title": "완료",
-            "number": 6,
+            "number": 5,
             "description": "# enter 버튼을 통해 'Chapter2. 함께 작업' 퀴즈를 완료합니다.",
             "terminal_guide": "",
+            "hint":"good job :)",
             "answer": [
                 ""
             ]
@@ -168,8 +176,9 @@
             "chapter": "3. 브랜치 작업",
             "title": "브랜치 생성 1",
             "number": 1,
-            "description": "# main 브랜치에서 작업을 하는 도중, 테스트 해보고 싶은 기능이 생겼습니다. test 브랜치를 생성해서 작업을 해 볼까요? ",
+            "description": "# main 브랜치에서 작업을 하는 도중, 테스트 해보고 싶은 기능이 생겼습니다. test 브랜치를 생성해서 작업을 해 볼까요?",
             "terminal_guide": "",
+            "hint":"switch 또는 checkout 명령어에 옵션을 붙여 활용할 수 있어요",
             "answer": [
                 "git switch -c test",
                 "git checkout -b test"
@@ -181,16 +190,29 @@
             "number": 2,
             "description": "# test 브랜치를 만들었습니다. 생성한 브랜치의 목록과 내가 현재 어떤 브랜치에 있는지 확인해 볼까요?",
             "terminal_guide": "\n test * \n main",
+            "hint":"하나의 명령어로 브랜치의 목록, 현재 위치 모두 확인할 수 있어요",
             "answer": [
                 "git branch"
             ]
         },
         {
             "chapter": "3. 브랜치 작업",
-            "title": "브랜치 생성 2",
+            "title": "작업 내용 숨겨두기",
             "number": 3,
+            "description": "# test 브랜치에서 작업을 하다가 오류가 생겼습니다. 작업하던 내용을 잠시 다른 공간에 저장해 둘 방법이 있을까요?",
+            "terminal_guide": "Saved working directory and index state WIP on test: 9611532 index.js 수정",
+            "hint":"'숨겨두다'는 의미를 가진 명령어를 입력해보세요",
+            "answer": [
+                "git stash"
+            ]
+        },
+        {
+            "chapter": "3. 브랜치 작업",
+            "title": "브랜치 생성 2",
+            "number": 4,
             "description": "# test 브랜치에서 로그인 구현 작업을 하던 중 또 다른 방법이 생각났습니다. 실험을 위해 test2 라는 브랜치를 생성해볼까요?",
             "terminal_guide": "Switched to a new branch 'test2'",
+            "hint":"switch 또는 checkout 명령어에 옵션을 붙여 활용할 수 있어요",
             "answer": [
                 "git switch -c test2",
                 "git checkout -b test2"
@@ -199,9 +221,10 @@
         {
             "chapter": "3. 브랜치 작업",
             "title": "브랜치 이동 1",
-            "number": 4,
+            "number": 5,
             "description": "# test2 브랜치에서 하던 작업들에 오류가 있습니다. 재빨리 test 브랜치로 이동해서 다시 시작해야겠어요.",
             "terminal_guide": "Switched to branch 'test' \n Your branch is up to date with 'origin/test'.",
+            "hint":"switch 또는 checkout 명령어를 활용할 수 있어요",
             "answer": [
                 "git switch test",
                 "git checkout test"
@@ -210,9 +233,10 @@
         {
             "chapter": "3. 브랜치 작업",
             "title": "브랜치 이동 2",
-            "number": 5,
+            "number": 6,
             "description": "# test 브랜치에서 작업을 하던 중 원하는 결과물이 완성되었습니다! 이 코드를 main 브랜치로 옮길 방법이 있을까요? 먼저 메인 브랜치로 이동하세요.",
             "terminal_guide": "Switched to branch 'main' \n Your branch is up to date with 'origin/main'.",
+            "hint":"switch 또는 checkout 명령어를 활용할 수 있어요",
             "answer": [
                 "git switch main",
                 "git checkout main"
@@ -221,9 +245,10 @@
         {
             "chapter": "3. 브랜치 작업",
             "title": "병합하기",
-            "number": 6,
+            "number": 7,
             "description": "# test 브랜치에서 작업을 하던 중 원하는 결과물이 완성되었습니다! 이 코드를 main 브랜치로 옮길 방법이 있을까요? test 브랜치 내용을 main 브랜치로 merge 하세요.",
             "terminal_guide": "Updating 3bda7a6..ce8db65 \n Fast-forward \n index.js | 3 ++- \n 1 file changed, 2 insertions(+), 1 deletion(-)",
+            "hint":"merge 명령어를 브랜치 이름과 함께 입력하세요",
             "answer": [
                 "git merge test"
             ]
@@ -231,9 +256,10 @@
         {
             "chapter": "3. 브랜치 작업",
             "title": "완료",
-            "number": 7,
+            "number": 8,
             "description": "# enter 버튼을 통해 'Chapter3. 브랜치 작업' 퀴즈를 완료합니다.",
             "terminal_guide": "",
+            "hint":"nice :)",
             "answer": [
                 ""
             ]
@@ -242,20 +268,22 @@
     "4": [
         {
             "chapter": "4. 충돌 해결하기",
-            "title": "업로드",
+            "title": "push",
             "number": 1,
             "description": "# 페어 프로그래밍을 진행하고 있습니다. 각자 작업을 진행하던 중 서로 작업한 파일을 공유하기 위해 먼저 내가 로컬에서 커밋해 놓은 파일을 리모트 main 브랜치에 푸쉬하려고 합니다.",
             "terminal_guide": "Enumerating objects: 1, done. \n Counting objects: 100% (1/1), done. \n Delta compression using up to 1 threads. \n Compressing objects: 100% (1/1), done. \n Writing objects: 100% (1/1), 212.65 KiB | 10.63 MiB/s, done. \n Total 1 (delta 0), reused 0 (delta 0). To https://github.com/kimcoding/test 9ec18c7..2a4535f  main -> main",
+            "hint":"remote origin의 해당 branch에 push하세요",
             "answer": [
                 "git push origin main"
             ]
         },
         {
             "chapter": "4. 충돌 해결하기",
-            "title": "가져오기",
+            "title": "pull",
             "number": 2,
             "description": "# 페어도 똑같이 본인의 main 브랜치에 푸쉬한 파일이 있네요. 페어가 작업한 내용을 내 로컬로 가지고 와 볼까요?",
             "terminal_guide": "From https://github.com/kimcoding/test \n * branch            master     -> FETCH_HEAD \n * [new branch]      master     -> pair/master \n Already up to date.",
+            "hint":"pair의 main 브랜치 내용을 pull 받아오세요",
             "answer": [
                 "git pull pair main"
             ]
@@ -264,9 +292,12 @@
             "chapter": "4. 충돌 해결하기",
             "title": "Staging area: 버전 관리하에 둠",
             "number": 3,
-            "description": "# 충돌이 발생했어요! 충돌한 부분을 수정하고, 수정이 완료된 index.js 파일을 staging 영역으로 올려둡시다.",
+            "description": "# 충돌이 발생했어요! 충돌한 부분을 수정했습니다. 수정이 완료된 index.js 파일을 staging 영역으로 올려주세요.",
             "terminal_guide": "",
+            "hint":"파일을 staging area로 더한다는 의미의 명령어를 입력해 보세요",
             "answer": [
+                "git add index.js",
+                "git add ./index.js",
                 "git add ."
             ]
         },
@@ -274,18 +305,20 @@
             "chapter": "4. 충돌 해결하기",
             "title": "commit",
             "number": 4,
-            "description": "# 충돌을 해결했으니 충돌 수정이라는 커밋 메시지로 커밋을 날려봅시다.",
+            "description": "# 충돌을 해결했으니 '충돌 수정' 이라는 커밋 메시지로 커밋을 날려봅시다.",
             "terminal_guide": "[resolve ce8db65] 충돌 수정\n 1 file changed, 2 insertions(+), 1 deletion(-)",
+            "hint":"commit을 할 때, -m 옵션을 통해 코멘트를 남길 수 있어요",
             "answer": [
-                "git commit -m '충돌 수정"
+                "git commit -m '충돌 수정'"
             ]
         },
         {
             "chapter": "4. 충돌 해결하기",
-            "title": "업로드",
+            "title": "push",
             "number": 5,
             "description": "# merge된 파일을 나의 remote repository main 브랜치와 sync를 맞추어 봅시다.",
             "terminal_guide": "Enumerating objects: 5, done. \n Counting objects: 100% (5/5), done. \n Writing objects: 100% (3/3), 275 bytes | 275.00 KiB/s, done. \n Total 3 (delta 0), reused 0 (delta 0) \n To https://github.com/kimcoding/test.git \n 3bda7a6..ce8db65  main -> main",
+            "hint":"나의 remote repository main 브랜치에 푸쉬해보세요",
             "answer": [
                 "git push origin main"
             ]
@@ -296,9 +329,10 @@
             "number": 6,
             "description": "# 축하합니다! 충돌이 해결되었습니다 :) enter를 눌러 퀴즈를 마무리 하세요.",
             "terminal_guide": "",
+            "hint":"Congratulation :)",
             "answer": [
                 ""
             ]
-        }
+      }
     ]
-}
+        }
