@@ -1,10 +1,12 @@
 import React from 'react';
 import './Start.css';
 import logo from '../logo.png';
+import { useHistory } from 'react-router-dom';
 
 function Start () {
+  const history = useHistory();
   const quizStartHandler = () => {
-    window.location.href = 'http://localhost:3000/chapter1/1';
+    history.push(`/chapter1/1`);
   };
 
   return (
