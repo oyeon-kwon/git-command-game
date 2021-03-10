@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/sw-sprint-git-workflow/static/css/main.53196a13.chunk.css",
+    "main.js": "/sw-sprint-git-workflow/static/js/main.8f5536e3.chunk.js",
+    "main.js.map": "/sw-sprint-git-workflow/static/js/main.8f5536e3.chunk.js.map",
+    "runtime-main.js": "/sw-sprint-git-workflow/static/js/runtime-main.95135888.js",
+    "runtime-main.js.map": "/sw-sprint-git-workflow/static/js/runtime-main.95135888.js.map",
+    "static/js/2.d1b7e51f.chunk.js": "/sw-sprint-git-workflow/static/js/2.d1b7e51f.chunk.js",
+    "static/js/2.d1b7e51f.chunk.js.map": "/sw-sprint-git-workflow/static/js/2.d1b7e51f.chunk.js.map",
+    "index.html": "/sw-sprint-git-workflow/index.html",
+    "static/css/main.53196a13.chunk.css.map": "/sw-sprint-git-workflow/static/css/main.53196a13.chunk.css.map",
+    "static/js/2.d1b7e51f.chunk.js.LICENSE.txt": "/sw-sprint-git-workflow/static/js/2.d1b7e51f.chunk.js.LICENSE.txt",
+    "static/media/ch1_10.3a33a58e.svg": "/sw-sprint-git-workflow/static/media/ch1_10.3a33a58e.svg",
+    "static/media/ch1_2.c67ebe89.svg": "/sw-sprint-git-workflow/static/media/ch1_2.c67ebe89.svg",
+    "static/media/ch1_3.add64791.svg": "/sw-sprint-git-workflow/static/media/ch1_3.add64791.svg",
+    "static/media/ch1_4_1.cfcd5301.svg": "/sw-sprint-git-workflow/static/media/ch1_4_1.cfcd5301.svg",
+    "static/media/ch1_4_2.505224f9.svg": "/sw-sprint-git-workflow/static/media/ch1_4_2.505224f9.svg",
+    "static/media/ch1_5_1.ced1248a.svg": "/sw-sprint-git-workflow/static/media/ch1_5_1.ced1248a.svg",
+    "static/media/ch1_5_2.87af1bbf.svg": "/sw-sprint-git-workflow/static/media/ch1_5_2.87af1bbf.svg",
+    "static/media/ch1_6.add64791.svg": "/sw-sprint-git-workflow/static/media/ch1_6.add64791.svg",
+    "static/media/ch1_7_1.c32741e2.svg": "/sw-sprint-git-workflow/static/media/ch1_7_1.c32741e2.svg",
+    "static/media/ch1_7_2.505224f9.svg": "/sw-sprint-git-workflow/static/media/ch1_7_2.505224f9.svg",
+    "static/media/ch1_8_1.ced1248a.svg": "/sw-sprint-git-workflow/static/media/ch1_8_1.ced1248a.svg",
+    "static/media/ch1_8_2.546ee73c.svg": "/sw-sprint-git-workflow/static/media/ch1_8_2.546ee73c.svg",
+    "static/media/ch1_9_1.91c326d2.svg": "/sw-sprint-git-workflow/static/media/ch1_9_1.91c326d2.svg",
+    "static/media/ch1_9_2.50434b55.svg": "/sw-sprint-git-workflow/static/media/ch1_9_2.50434b55.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.95135888.js",
+    "static/js/2.d1b7e51f.chunk.js",
+    "static/css/main.53196a13.chunk.css",
+    "static/js/main.8f5536e3.chunk.js"
+  ]
+}
