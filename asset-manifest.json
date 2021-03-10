@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/sw-sprint-git-workflow/static/css/main.53196a13.chunk.css",
-    "main.js": "/sw-sprint-git-workflow/static/js/main.7d413f15.chunk.js",
-    "main.js.map": "/sw-sprint-git-workflow/static/js/main.7d413f15.chunk.js.map",
+    "main.js": "/sw-sprint-git-workflow/static/js/main.a20d6d1b.chunk.js",
+    "main.js.map": "/sw-sprint-git-workflow/static/js/main.a20d6d1b.chunk.js.map",
     "runtime-main.js": "/sw-sprint-git-workflow/static/js/runtime-main.95135888.js",
     "runtime-main.js.map": "/sw-sprint-git-workflow/static/js/runtime-main.95135888.js.map",
     "static/js/2.d1b7e51f.chunk.js": "/sw-sprint-git-workflow/static/js/2.d1b7e51f.chunk.js",
@@ -29,6 +29,6 @@
     "static/js/runtime-main.95135888.js",
     "static/js/2.d1b7e51f.chunk.js",
     "static/css/main.53196a13.chunk.css",
-    "static/js/main.7d413f15.chunk.js"
+    "static/js/main.a20d6d1b.chunk.js"
   ]
 }
