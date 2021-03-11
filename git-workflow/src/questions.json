@@ -106,7 +106,7 @@
             "title": "로그 보기",
             "number": 9,
             "description": "# 내 커밋 로그를 확인하는 명령어를 입력해보세요.",
-            "terminal_guide": "commit 6b4395cec5934268a2bb5e41cd81a488891f02fb (HEAD -> main, origin/main, origin/HEAD) \n Author: kimcoding <kimcoding@gmail.com> \n Date:   Tue Feb 16 13:13:56 2021 +0900 \n completed",
+            "terminal_guide": "commit 6b4395cec5934268a2bb5e41cd81a488891f02fb (HEAD -> main, origin/main, origin/HEAD) \n Author: kimcoding <kimcoding@gmail.com> \n Date:   Tue Feb 16 13:13:56 2021 +0900 \n\n index.js 수정",
             "hint":"log 명령어를 통해 터미널 창에서 커밋 로그를 확인할 수 있어요",
             "answer": [
                 "git log"
