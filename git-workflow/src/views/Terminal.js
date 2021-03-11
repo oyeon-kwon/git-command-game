@@ -94,11 +94,11 @@ function Terminal (props) {
       </div>
       {
         correct === 'true'
-          ? <Modal isOpen={rightAnswerHandler} labelOK='Continue' continueHandler={continueHandler}>
+          ? <Modal currentChapter={currentChapter} currentStep={currentStep} isOpen={rightAnswerHandler} labelOK='Continue' continueHandler={continueHandler}>
             정답입니다!
             </Modal>
           : correct === 'false'
-            ? <Modal isOpen={wrongAnswerHandler} labelOK='Try Again'>
+            ? <Modal currentChapter={currentChapter} currentStep={currentStep} isCorrect={isCorrect} isOpen={wrongAnswerHandler} labelOK='Try Again'>
               잘못된 명령어입니다. <br /> 다시 시도해보시겠어요?
               </Modal>
             : null

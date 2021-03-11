@@ -1,12 +1,17 @@
 import React from 'react';
 import './Modal.css';
+import { useHistory } from 'react-router-dom';
 
 function Modal (props) {
   const continueHandler = props.continueHandler;
   const labelOK = props.labelOK;
+  const history = useHistory();
+  const currentChapter = Number(props.currentChapter);
+  const currentStep = Number(props.currentStep);
 
   const retryHandler = () => {
-    window.location.reload();
+    history.push(`/chapter${currentChapter}/${currentStep}`);
+    props.isCorrect('none')
   };
 
   return (
