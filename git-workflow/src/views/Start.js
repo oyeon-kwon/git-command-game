@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom';
 function Start () {
   const history = useHistory();
   const quizStartHandler = () => {
-    history.push(`/chapter1/1`);
+    history.push('/chapter1/1');
   };
 
   return (

@@ -11,7 +11,7 @@ function Modal (props) {
 
   const retryHandler = () => {
     history.push(`/chapter${currentChapter}/${currentStep}`);
-    props.isCorrect('none')
+    props.isCorrect('none');
   };
 
   return (

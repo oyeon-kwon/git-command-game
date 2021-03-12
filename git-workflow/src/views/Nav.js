@@ -19,15 +19,15 @@ function Nav (props) {
   };
 
   const selectChapterHandler = () => {
-    showChapter(!chapter)
-  }
+    showChapter(!chapter);
+  };
 
   return (
     <div className='nav'>
       <div className='nav_title' onClick={selectChapterHandler}>
         Chapter {questions[String(currentChapter)][currentStep - 1].chapter}
       </div>
-      { chapter === true ? <Chapter /> : null }
+      {chapter === true ? <Chapter /> : null}
       <ol>
         {
           questions[currentChapter].map((q, i) => <li className={i + 1 === currentStep ? 'current_tab' : null} key={i} onClick={selectQuestionHandler}>{q.title}</li>)
