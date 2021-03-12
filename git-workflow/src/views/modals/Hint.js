@@ -1,6 +1,6 @@
 import React from 'react';
 import './Hint.css';
-import questions from '../questions.json';
+import questions from '../../questions.json';
 
 function Hint (props) {
   const currentChapter = props.currentChapter;

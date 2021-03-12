@@ -160,10 +160,10 @@
         },
         {
             "chapter": "2. 함께 작업",
-            "title": "가져오기",
+            "title": "pull",
             "number": 4,
-            "description": "# 페어가 작업해서 main 브랜치에 커밋해 놓은 내용을 내 로컬 리파지토리로 가져오려고 합니다.",
-            "terminal_guide": "",
+            "description": "# 페어의 컴퓨터에서 페어 프로그래밍을 열심히 진행해 테스트 케이스를 모두 통과했습니다. 페어의 코드를 내 로컬로 받아올 수 있을까요?",
+            "terminal_guide": "스크린샷 보고 수정",
             "hint":"pair의 main 브랜치 내용을 받아오세요",
             "answer": [
                 "git pull pair main"
@@ -171,8 +171,46 @@
         },
         {
             "chapter": "2. 함께 작업",
-            "title": "완료",
+            "title": "Staging area: 버전 관리하에 둠 1",
             "number": 5,
+            "description": "# 앗.. 내가 이전에 풀었던 파일들이 있었나봐요. 페어가 작성한 파일과의 충돌이 발생했습니다. 충돌한 부분을 수정하고, 수정이 완료된 index.js 파일을 staging 영역으로 올려둡시다.",
+            "terminal_guide": "",
+            "hint":"",
+            "answer": [
+                "git add index.js",
+                "git add ./index.js",
+                "git add .",
+                "git add *"
+            ]
+        },
+        {
+            "chapter": "2. 함께 작업",
+            "title": "commit 1",
+            "number": 6,
+            "description": "# 충돌을 해결했으니 ‘충돌 수정' 이라는 커밋 메시지로 커밋을 날려봅시다.",
+            "terminal_guide": "",
+            "hint":"",
+            "answer": [
+                "git commit -m '충돌 수정'",
+                "git commit -m \"충돌 수정\""
+            ]
+        },
+        {
+            "chapter": "2. 함께 작업",
+            "title": "push",
+            "number": 7,
+            "description": "# 자 이제 다시 내 리모트 리파지토리로 업로드해주어야 과제 제출을 할 수 있어요.",
+            "terminal_guide": "",
+            "hint":"",
+            "answer": [
+                "git push origin main",
+                "git push"
+            ]
+        },
+        {
+            "chapter": "2. 함께 작업",
+            "title": "완료",
+            "number": 8,
             "description": "# enter 버튼을 통해 'Chapter2. 함께 작업' 퀴즈를 완료합니다.",
             "terminal_guide": "",
             "hint":"good job :)",

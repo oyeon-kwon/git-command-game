@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './Terminal.css';
 import questions from '../questions.json';
-import Modal from './Modal';
-import Hint from './Hint';
+import Modal from './modals/Modal';
+import Hint from './modals/Hint';
 import { useHistory } from 'react-router-dom';
 
 function Terminal (props) {
