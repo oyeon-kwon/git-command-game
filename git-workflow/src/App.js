@@ -6,24 +6,26 @@ import Container from './Container';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
-} from "react-router-dom";
+  Route,
+  BrowserRouter
+} from 'react-router-dom';
 
-function App() {
-
+function App () {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/">
-          <Start />
-        </Route>
-        <Route path={`/chapter:chapter/:number`} container={<Container />}>
-          <Container />
-        </Route>
-        <Route exact path="/end">
-          <End />
-        </Route>
-      </Switch>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <Switch>
+          <Route exact path='/'>
+            <Start />
+          </Route>
+          <Route path='/chapter:chapter/:number' container={<Container />}>
+            <Container />
+          </Route>
+          <Route exact path='/end'>
+            <End />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </Router>
   );
 }

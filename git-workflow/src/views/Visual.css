@@ -1,52 +1,119 @@
+.visual_container {
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.visual_container > img {
+  left: 30px;
+  z-index: 10;
+}
+
 .visual_sub_title {
-  background-color: #4000c7;
-  color: white;
-  display: inline-block;
-  text-align: center;
-  width: 100px;
-  margin-bottom: 0.2rem;
-  border-radius: 7px 0 0 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  transform: rotate(270deg);
+  transform-origin: 0 0;
+  color: #4000c7;
+  position: absolute;
+  bottom: 0;
+  left: -21px;
+  font-weight: 500;
 }
 
 .visual_third_title {
-  background-color: #c5caec;
+  border-bottom: 2px solid orange;
   display: inline-block;
-  width: 100%;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.remote, .local {
+  position: relative;
+  border-left: 28px solid #c5caec77;
+  padding: 10px;
+}
+
+hr {
+  border: none;
+  border-top: 1px dotted #4000c7;
+  margin: 0;
 }
 
 .remote {
   height: 250px;
+  background-color: #c5caec34;
+}
+
+.local {
+  height: 330px;
+  background-color: #f0f0f0;
+}
+
+.area_box_container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.area_box {
+  border: 1px solid #c5caec;
+  background-color: #ffffff;
+  width: calc(100% - 20px);
+  flex: 1 0 auto;
+  margin: 10px;
+  border-radius: 1rem;
+}
+
+.staging {
+  border: 1px solid #c5caec;
+  height: 70px;
+}
+
+.untracked {
+  border: 1px solid #c5caec;
+  height: 70px;
+}
+
+.stash {
+  border: 1px solid #c5caec;
+  height: 150px;
+}
+
+.remote_ch3 {
+  height: 150px;
   margin: 10px;
   border: 1px solid #4000c7;
   border-radius: 8px;
 }
 
-.pair {
+.origin_ch3 {
   border: 1px solid #c5caec;
-  width: 1150px;
-  height: 100px;
-  margin-bottom: 4px;
+  width: 98%;
+  height: 220px;
   margin-left: 10px;
   margin-right: 10px;
 }
 
-.origin {
-  border: 1px solid #c5caec;
-  width: 1150px;
-  height: 100px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.local {
+.local_ch3 {
   border: 1px solid #4000c7;
-  height: 300px;
+  height: 400px;
   margin: 10px;
   border-radius: 8px;
 }
 
 .commit {
-  height: 7rem;
+  height: 120px;
+}
+
+.svg {
+  position: absolute;
+}
+
+.commit_ch3 {
+  height: 13rem;
 }
 
 .layout {
@@ -58,7 +125,6 @@
   justify-content: center;
   align-items: center;
   width: 800px;
-  margin: 10px;
 }
 
 .right {
@@ -66,29 +132,10 @@
   justify-content: center;
   align-items: center;
   width: 340px;
-  margin-right: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.staging {
-  border: 1px solid #c5caec;
-  height: 70px;
-  margin-bottom: 2px;
-}
-
-.untracked {
-  border: 1px solid #c5caec;
-  height: 70px;
 }
 
 .file {
   color: crimson;
-}
-
-.stash {
-  border: 1px solid #c5caec;
-  height: 142px;
 }
 
 .github_logo {
@@ -97,22 +144,16 @@
   margin-bottom: 250px;
 }
 
+.svg {
+  position: absolute;
+}
+
 svg {
-  margin-left: 50px;
+  position: absolute;
 }
 
 .show_commit {
   animation: boxFade 1s linear alternate;
-}
-
-.ch1_4 {
-  position: fixed;
-  margin-top: 310px;
-}
-
-.ch1_5 {
-  position: fixed;
-  margin-top: 310px;
 }
 
 @keyframes boxFade {

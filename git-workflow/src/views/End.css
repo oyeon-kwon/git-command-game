@@ -17,15 +17,6 @@
   margin-top: 4rem;
 }
 
-.start_description {
-  margin-top: 8rem;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 100;
-  font-family: 'PT Sans', sans-serif;
-  color: rgba(255, 255, 255, 0.8);
-}
-
 .retry_button {
   background-color: #4000c7;
   border-radius: 1.5rem;
