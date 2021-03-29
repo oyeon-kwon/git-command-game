@@ -94,7 +94,7 @@ function Terminal (props) {
       </div>
       {
         correct === 'true'
-          ? <Modal currentChapter={currentChapter} currentStep={currentStep} isOpen={rightAnswerHandler} labelOK='Continue' continueHandler={continueHandler}>
+          ? <Modal currentChapter={currentChapter} currentStep={currentStep} isCorrect={isCorrect} isOpen={rightAnswerHandler} labelOK='Continue' continueHandler={continueHandler}>
             정답입니다!
             </Modal>
           : correct === 'false'

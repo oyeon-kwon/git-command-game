@@ -138,11 +138,33 @@
         },
         {
             "chapter": "2. 함께 작업",
-            "title": "리모트 연결",
+            "title": "리모트 연결 (origin)",
             "number": 2,
-            "description": "# 김코딩은 페어 프로그래밍을 위해서 페어의 리모트 리파지토리를 본인의 로컬과 연결하려 합니다. 페어의 이름은 pair 로 지정하세요. 리파지토리 링크는 https://github.com/pair/test 입니다.",
+            "description": "# 혼자 작업을 조금 진행하고 commit 기록을 남겼습니다. 내 Remote Repository와 연결해서 Remote 상에도 이 코드를 적용해야겠어요. 내 Repository 링크는 https://github.com/kimcoding/test 입니다.",
             "terminal_guide": "",
-            "hint":"pair의 깃헙 주소를 add 하세요",
+            "hint":"내 Remote Repository 주소를 origin이라는 이름으로 등록하세요",
+            "answer": [
+                "git remote add origin https://github.com/kimcoding/test"
+            ]
+        },
+        {
+            "chapter": "2. 함께 작업",
+            "title": "Push 1",
+            "number": 3,
+            "description": "# 페어와 함께 작업을 진행하려고 합니다. 지금까지 local에 커밋해놓은 기록을 Remote Repository의 main 브랜치에 push해서 페어에게 코드를 공유해야겠어요.",
+            "terminal_guide": "Enumerating objects: 1, done. \n Counting objects: 100% (1/1), done. \n Delta compression using up to 1 threads. \n Compressing objects: 100% (1/1), done. \n Writing objects: 100% (1/1), 212.65 KiB | 10.63 MiB/s, done. \n Total 1 (delta 0), reused 0 (delta 0). To https://github.com/kimcoding/test 9ec18c7..6b4395c  main -> main",
+            "hint":"내 Remote Repository에 Push 하세요",
+            "answer": [
+                "git push origin main"
+            ]
+        },
+        {
+            "chapter": "2. 함께 작업",
+            "title": "리모트 연결 (pair)",
+            "number": 4,
+            "description": "# 페어가 내 Remote Repository를 Fork 했다고 합니다. 페어의 Remote Repository를 내 local에도 등록해야겠어요. 페어의 리파지토리 링크는 https://github.com/pair/test 입니다.",
+            "terminal_guide": "",
+            "hint":"pair의 Remote Repository 주소를 pair라는 이름으로 등록하세요",
             "answer": [
                 "git remote add pair https://github.com/pair/test"
             ]
@@ -150,68 +172,103 @@
         {
             "chapter": "2. 함께 작업",
             "title": "리모트 확인",
-            "number": 3,
+            "number": 5,
             "description": "# 리모트 리파지토리가 잘 연결된 것이 맞는지 모르겠어요. 연결된 리모트 리파지토리의 목록들을 확인해 볼까요?",
             "terminal_guide": "origin https://github.com/kimcoding/test (fetch) \n origin https://github.com/kimcoding/test (push) \n pair https://github.com/pair/test (fetch) \n pair https://github.com/pair/test (push)",
-            "hint":"remote의 verbose 옵션으로 확인할 수 있어요",
+            "hint":"verbose 옵션으로 확인할 수 있어요",
             "answer": [
                 "git remote -v"
             ]
         },
         {
             "chapter": "2. 함께 작업",
-            "title": "pull",
-            "number": 4,
-            "description": "# 페어의 컴퓨터에서 페어 프로그래밍을 열심히 진행해 테스트 케이스를 모두 통과했습니다. 페어의 코드를 내 로컬로 받아올 수 있을까요?",
-            "terminal_guide": "스크린샷 보고 수정",
-            "hint":"pair의 main 브랜치 내용을 받아오세요",
-            "answer": [
-                "git pull pair main"
-            ]
-        },
-        {
-            "chapter": "2. 함께 작업",
             "title": "Staging area: 버전 관리하에 둠 1",
-            "number": 5,
-            "description": "# 앗.. 내가 이전에 풀었던 파일들이 있었나봐요. 페어가 작성한 파일과의 충돌이 발생했습니다. 충돌한 부분을 수정하고, 수정이 완료된 index.js 파일을 staging 영역으로 올려둡시다.",
+            "number": 6,
+            "description": "# 리모트 연결이 완료되었으니 페어와 나누어서 작업을 진행했습니다. 나는 로그인 페이지, 페어는 회원가입 페이지를 구현했어요. 내가 작업한 로그인 페이지를 commit 하려 합니다. 먼저 staging area에 작업한 파일을 추가해주세요.",
             "terminal_guide": "",
-            "hint":"",
+            "hint":"파일을 staging area로 더한다는 의미의 명령어를 입력해 보세요",
             "answer": [
-                "git add index.js",
-                "git add ./index.js",
+                "git add login.js",
+                "git add ./login.js",
                 "git add .",
                 "git add *"
             ]
         },
         {
             "chapter": "2. 함께 작업",
-            "title": "commit 1",
-            "number": 6,
-            "description": "# 충돌을 해결했으니 ‘충돌 수정' 이라는 커밋 메시지로 커밋을 날려봅시다.",
-            "terminal_guide": "",
-            "hint":"",
+            "title": "Commit 1",
+            "number": 7,
+            "description": "# staging area에 파일이 추가되었습니다. '로그인 페이지 구현' 이라는 메시지로 commit 을 진행해주세요.",
+            "terminal_guide": "[main 6b4395c] completed 1 files changed, \n 123 insertions(+) create mode 100644 login.js",
+            "hint":"commit을 할 때, -m 옵션을 통해 코멘트를 남길 수 있어요",
             "answer": [
-                "git commit -m '충돌 수정'",
-                "git commit -m \"충돌 수정\""
+                "git commit -m '로그인 페이지 구현'",
+                "git commit -m \"로그인 페이지 구현\""
             ]
         },
         {
             "chapter": "2. 함께 작업",
-            "title": "push",
-            "number": 7,
-            "description": "# 자 이제 다시 내 리모트 리파지토리로 업로드해주어야 과제 제출을 할 수 있어요.",
-            "terminal_guide": "",
-            "hint":"",
+            "title": "Pull",
+            "number": 8,
+            "description": "# 내 커밋을 Remote에 푸시하기 전에 페어가 작업한 회원가입 페이지를 합치려고 합니다. 페어의 코드를 내 컴퓨터로 받아올 수 있을까요?",
+            "terminal_guide": "remote: Enumerating objects: 5, done. \n remote: Counting objects: 100% (5/5) , done. \n remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 \n Unpacking objects: 100% (3/3), done. \n From https://github.com/pair/test \n * branch        main     ->   FETCH_HEAD \n *[new branch]   master   ->   pair/main \n Auto-merging login.js \n Merge made by the 'recursive' strategy. \n login.js | 1 + \n 1 file changed, 1 insertion(+)",
+            "hint":"pair의 Remote Repository를 내 Local Repository로 받아옵니다.",
             "answer": [
-                "git push origin main",
-                "git push"
+                "git pull pair main"
+            ]
+        },
+        {
+            "chapter": "2. 함께 작업",
+            "title": "충돌 해결하기",
+            "number": 9,
+            "description": "# 앗.. 하필 페어도 login.js 파일의 동일한 라인을 수정했군요. 페어가 작성한 파일과의 충돌이 발생했습니다. 더 진행하기 전에 이 충돌을 해결해야만 합니다. 파일 내 충돌하는 부분은 다음과 같은 모양을 띄고 있습니다.\n(enter를 눌러 터미널 창에서 확인하세요. 터미널에 나오는 내용은 실제 터미널에는 나오지 않습니다. 여러분이 파일을 어떻게 수정할 지를 보여주는 예시입니다.)",
+            "terminal_guide": "<<<< \n console.log('내 변경사항') \n ======= \n console.log('페어의 변경사항') \n >>>> \n 적용할 코드를 취사선택해야 합니다. 페어가 작성한 코드를 적용하려면 충돌 부분을 아래와 같이 만들어주시고, 저장하시면 됩니다. \n console.log('페어의 변경사항')",
+            "hint":"enter를 눌러서 확인하세요",
+            "answer": [
+                ""
+            ]
+        },
+        {
+            "chapter": "2. 함께 작업",
+            "title": "Staging area: 버전 관리하에 둠 2",
+            "number": 10,
+            "description": "# 충돌이 생긴 부분의 수정을 완료했어요! 다시 Remote Repository에 Push 하기 위해서 수정한 파일을 staging area에 추가해주세요.",
+            "terminal_guide": "",
+            "hint":"파일을 staging area로 더한다는 의미의 명령어를 입력해 보세요",
+            "answer": [
+                "git add login.js",
+                "git add ./login.js",
+                "git add .",
+                "git add *"
+            ]
+        },
+        {
+            "chapter": "2. 함께 작업",
+            "title": "Commit 2",
+            "number": 11,
+            "description": "# 충돌이 해결된 후 staging area에 올라간 파일은 자동으로 commit 메시지가 생성됩니다. 자동 생성된 commit 메시지를 적용하는 명령어를 입력하세요.",
+            "terminal_guide": "[main 2e6485b] Merge branch 'main' of https://github.com/kimcoding/test ",
+            "hint":"자동으로 생성되는 commit 메시지를 사용하려면 따로 옵션 커맨드를 사용하지 않습니다",
+            "answer": [
+                "git commit"
+            ]
+        },
+        {
+            "chapter": "2. 함께 작업",
+            "title": "Push 2",
+            "number": 12,
+            "description": "# 다음과 같이 merge commit 메시지가 자동으로 생성됩니다. 이제 내 Remote Repository에도 Local Repository의 내용을 반영합시다.",
+            "terminal_guide": "Enumerating objects: 1, done. \n Counting objects: 100% (1/1), done. \n Delta compression using up to 1 threads. \n Compressing objects: 100% (1/1), done. \n Writing objects: 100% (1/1), 212.65 KiB | 10.63 MiB/s, done. \n Total 1 (delta 0), reused 0 (delta 0). To https://github.com/kimcoding/test 9ec18c7..2e6485b  main -> main",
+            "hint":"내 Remote Repository에 Push 하세요",
+            "answer": [
+                "git push origin main"
             ]
         },
         {
             "chapter": "2. 함께 작업",
             "title": "완료",
-            "number": 8,
-            "description": "# enter 버튼을 통해 'Chapter2. 함께 작업' 퀴즈를 완료합니다.",
+            "number": 13,
+            "description": "# enter 버튼을 통해 퀴즈를 완료합니다.",
             "terminal_guide": "",
             "hint":"good job :)",
             "answer": [
@@ -312,78 +369,5 @@
                 ""
             ]
         }
-    ],
-    "4": [
-        {
-            "chapter": "4. 충돌 해결하기",
-            "title": "push",
-            "number": 1,
-            "description": "# 페어 프로그래밍을 진행하고 있습니다. 각자 작업을 진행하던 중 서로 작업한 파일을 공유하기 위해 먼저 내가 로컬에서 커밋해 놓은 파일을 리모트 main 브랜치에 푸쉬하려고 합니다.",
-            "terminal_guide": "Enumerating objects: 1, done. \n Counting objects: 100% (1/1), done. \n Delta compression using up to 1 threads. \n Compressing objects: 100% (1/1), done. \n Writing objects: 100% (1/1), 212.65 KiB | 10.63 MiB/s, done. \n Total 1 (delta 0), reused 0 (delta 0). To https://github.com/kimcoding/test 9ec18c7..2a4535f  main -> main",
-            "hint":"remote origin의 해당 branch에 push하세요",
-            "answer": [
-                "git push origin main"
-            ]
-        },
-        {
-            "chapter": "4. 충돌 해결하기",
-            "title": "pull",
-            "number": 2,
-            "description": "# 페어도 똑같이 본인의 main 브랜치에 푸쉬한 파일이 있네요. 페어가 작업한 내용을 내 로컬로 가지고 와 볼까요?",
-            "terminal_guide": "From https://github.com/kimcoding/test \n * branch            master     -> FETCH_HEAD \n * [new branch]      master     -> pair/master \n Already up to date.",
-            "hint":"pair의 main 브랜치 내용을 pull 받아오세요",
-            "answer": [
-                "git pull pair main"
-            ]
-        },
-        {
-            "chapter": "4. 충돌 해결하기",
-            "title": "Staging area: 버전 관리하에 둠",
-            "number": 3,
-            "description": "# 충돌이 발생했어요! 충돌한 부분을 수정했습니다. 수정이 완료된 index.js 파일을 staging 영역으로 올려주세요.",
-            "terminal_guide": "",
-            "hint":"파일을 staging area로 더한다는 의미의 명령어를 입력해 보세요",
-            "answer": [
-                "git add index.js",
-                "git add ./index.js",
-                "git add .",
-                "git add *"
-            ]
-        },
-        {
-            "chapter": "4. 충돌 해결하기",
-            "title": "commit",
-            "number": 4,
-            "description": "# 충돌을 해결했으니 '충돌 수정' 이라는 커밋 메시지로 커밋을 날려봅시다.",
-            "terminal_guide": "[resolve ce8db65] 충돌 수정\n 1 file changed, 2 insertions(+), 1 deletion(-)",
-            "hint":"commit을 할 때, -m 옵션을 통해 코멘트를 남길 수 있어요",
-            "answer": [
-                "git commit -m '충돌 수정'",
-                "git commit -m \"충돌 수정\""
-            ]
-        },
-        {
-            "chapter": "4. 충돌 해결하기",
-            "title": "push",
-            "number": 5,
-            "description": "# merge된 파일을 나의 remote repository main 브랜치와 sync를 맞추어 봅시다.",
-            "terminal_guide": "Enumerating objects: 5, done. \n Counting objects: 100% (5/5), done. \n Writing objects: 100% (3/3), 275 bytes | 275.00 KiB/s, done. \n Total 3 (delta 0), reused 0 (delta 0) \n To https://github.com/kimcoding/test.git \n 3bda7a6..ce8db65  main -> main",
-            "hint":"나의 remote repository main 브랜치에 푸쉬해보세요",
-            "answer": [
-                "git push origin main",
-                "git push"
-            ]
-        },
-        {
-            "chapter": "4. 충돌 해결하기",
-            "title": "완료",
-            "number": 6,
-            "description": "# 축하합니다! 충돌이 해결되었습니다 :) enter를 눌러 퀴즈를 마무리 하세요.",
-            "terminal_guide": "",
-            "hint":"Congratulation :)",
-            "answer": [
-                ""
-            ]
-      }
     ]
         }
