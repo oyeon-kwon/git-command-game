@@ -11,7 +11,11 @@ function Modal (props) {
 
   const retryHandler = () => {
     history.push(`/chapter${currentChapter}/${currentStep}`);
+<<<<<<< HEAD:git-workflow/src/views/modals/Modal.js
     props.isCorrect('none');
+=======
+    props.isCorrect('none')
+>>>>>>> a4e1f2a719d46c6bec9abd81acdb22d2195d0c35:git-workflow/src/views/Modal.js
   };
 
   return (

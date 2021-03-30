@@ -2,13 +2,19 @@ import React, { useState } from 'react';
 import './Nav.css';
 import questions from '../questions.json';
 import { useHistory } from 'react-router-dom';
+<<<<<<< HEAD
 import Chapter from './modals/Chapter';
+=======
+>>>>>>> a4e1f2a719d46c6bec9abd81acdb22d2195d0c35
 
 function Nav (props) {
   const currentChapter = Number(props.currentChapter);
   const currentStep = Number(props.currentStep);
   const history = useHistory();
+<<<<<<< HEAD
   const [chapter, showChapter] = useState(false);
+=======
+>>>>>>> a4e1f2a719d46c6bec9abd81acdb22d2195d0c35
 
   const selectQuestionHandler = (q) => {
     for (let i = 0; i < questions[currentChapter].length; i++) {
@@ -17,10 +23,13 @@ function Nav (props) {
       }
     }
   };
+<<<<<<< HEAD
 
   const selectChapterHandler = () => {
     showChapter(!chapter);
   };
+=======
+>>>>>>> a4e1f2a719d46c6bec9abd81acdb22d2195d0c35
 
   return (
     <div className='nav'>
