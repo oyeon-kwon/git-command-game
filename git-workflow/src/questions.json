@@ -140,9 +140,9 @@
             "chapter": "2. 함께 작업",
             "title": "리모트 연결 (origin)",
             "number": 2,
-            "description": "# 혼자 작업을 조금 진행하고 commit 기록을 남겼습니다. 내 Remote Repository와 연결해서 Remote 상에도 이 코드를 적용해야겠어요. 내 Repository 링크는 https://github.com/kimcoding/test 입니다.",
+            "description": "# 혼자 작업을 조금 진행하고 commit 기록을 남겼습니다. 내 Remote Repository와 연결해서 Remote 상에도 이 코드를 적용해야겠어요. origin이라는 이름으로 내 Remote Repository를 등록하세요. 내 Repository 링크는 https://github.com/kimcoding/test 입니다.",
             "terminal_guide": "",
-            "hint":"내 Remote Repository 주소를 origin이라는 이름으로 등록하세요",
+            "hint":"git remote에 관련 명령어가 있습니다.",
             "answer": [
                 "git remote add origin https://github.com/kimcoding/test"
             ]
@@ -151,7 +151,7 @@
             "chapter": "2. 함께 작업",
             "title": "Push 1",
             "number": 3,
-            "description": "# 페어와 함께 작업을 진행하려고 합니다. 지금까지 local에 커밋해놓은 기록을 Remote Repository의 main 브랜치에 push해서 페어에게 코드를 공유해야겠어요.",
+            "description": "# 페어와 함께 작업을 진행하려고 합니다. 지금까지 main 브랜치에 커밋한 기록을 방금 등록한 origin remote repository에 올려서, 페어에게 코드를 공유해야겠어요.",
             "terminal_guide": "Enumerating objects: 1, done. \n Counting objects: 100% (1/1), done. \n Delta compression using up to 1 threads. \n Compressing objects: 100% (1/1), done. \n Writing objects: 100% (1/1), 212.65 KiB | 10.63 MiB/s, done. \n Total 1 (delta 0), reused 0 (delta 0). To https://github.com/kimcoding/test 9ec18c7..6b4395c  main -> main",
             "hint":"내 Remote Repository에 Push 하세요",
             "answer": [
@@ -162,7 +162,7 @@
             "chapter": "2. 함께 작업",
             "title": "리모트 연결 (pair)",
             "number": 4,
-            "description": "# 페어가 내 Remote Repository를 Fork 했다고 합니다. 페어의 Remote Repository를 내 local에도 등록해야겠어요. 페어의 리파지토리 링크는 https://github.com/pair/test 입니다.",
+            "description": "# 페어가 내 Remote Repository를 Fork 했다고 합니다. 페어의 Remote Repository를 내 local에 pair라는 이름으로 등록해야겠어요. 페어의 리파지토리 링크는 https://github.com/pair/test 입니다.",
             "terminal_guide": "",
             "hint":"pair의 Remote Repository 주소를 pair라는 이름으로 등록하세요",
             "answer": [
@@ -173,11 +173,12 @@
             "chapter": "2. 함께 작업",
             "title": "리모트 확인",
             "number": 5,
-            "description": "# 리모트 리파지토리가 잘 연결된 것이 맞는지 모르겠어요. 연결된 리모트 리파지토리의 목록들을 확인해 볼까요?",
+            "description": "# 리모트 리파지토리가 잘 연결된 것이 맞는지 모르겠어요. 연결된 리모트 리파지토리의 목록과 주소들을 확인해 볼까요?",
             "terminal_guide": "origin https://github.com/kimcoding/test (fetch) \n origin https://github.com/kimcoding/test (push) \n pair https://github.com/pair/test (fetch) \n pair https://github.com/pair/test (push)",
             "hint":"verbose 옵션으로 확인할 수 있어요",
             "answer": [
-                "git remote -v"
+                "git remote -v",
+                "git remote --verbose"
             ]
         },
         {

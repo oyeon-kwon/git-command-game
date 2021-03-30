@@ -2,6 +2,7 @@ import React from 'react';
 import githubLogo from '../github.png';
 import Remote from './layouts/Remote';
 import Local from './layouts/Local';
+import ch2_2 from '../imgs/ch2/ch2_2.svg';
 import ch2_3 from '../imgs/ch2/ch2_3.svg';
 import ch2_4_1 from '../imgs/ch2/ch2_4_1.svg';
 import ch2_4_2 from '../imgs/ch2/ch2_4_2.svg';
@@ -31,12 +32,13 @@ function Ch2 (props) {
           </>
         : currentStep === 2
           ? <>
+            <img src={ch2_2} className='svg show_commit' alt='git'/>
             <Remote effect='show_commit' />
             <Local effect='show_commit' localStatus='true' />
           </>
           : currentStep === 3
             ? <>
-              <img src={ch2_3} className='svg show_commit' alt='git'/>
+              <img src={ch2_3} className='svg' alt='git'/>
               <Remote remoteStatus='origin-only' effect='show_commit' />
               <Local localStatus='true' />
             </>
