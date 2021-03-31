@@ -162,7 +162,7 @@
             "chapter": "2. 함께 작업",
             "title": "리모트 연결 (pair)",
             "number": 4,
-            "description": "# 페어가 내 Remote Repository를 Fork 했다고 합니다. 페어의 Remote Repository를 내 local에 pair라는 이름으로 등록해야겠어요. 페어의 리파지토리 링크는 https://github.com/pair/test 입니다.",
+            "description": "# 페어가 내 Remote Repository를 Fork 했다고 합니다. 페어의 Remote Repository를 내 Local에 pair라는 이름으로 등록해야겠어요. 페어의 리파지토리 링크는 https://github.com/pair/test 입니다.",
             "terminal_guide": "",
             "hint":"pair의 Remote Repository 주소를 pair라는 이름으로 등록하세요",
             "answer": [
@@ -183,9 +183,31 @@
         },
         {
             "chapter": "2. 함께 작업",
-            "title": "Staging area: 버전 관리하에 둠 1",
+            "title": "Pull 1",
             "number": 6,
-            "description": "# 리모트 연결이 완료되었으니 페어와 나누어서 작업을 진행했습니다. 나는 로그인 페이지, 페어는 회원가입 페이지를 구현했어요. 내가 작업한 로그인 페이지를 commit 하려 합니다. 먼저 staging area에 작업한 파일을 추가해주세요.",
+            "description": "# 리모트 연결이 완료되었으니 페어와 나누어서 작업을 진행했습니다. 내 commit을 Push하기 전에 페어가 작업해서 본인의 Remote Repository에 올려 놓은 내용을 합치려고 합니다. 페어의 코드를 내 Local로 받아올 수 있을까요?",
+            "terminal_guide": "remote: Enumerating objects: 5, done. \n remote: Counting objects: 100% (5/5), done. \n remote: Compressing objects: 100% (1/1), done. \n remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0 \n Unpacking objects: 100% (3/3), 277 bytes | 277.00 KiB/s, done. \n From https://github.com/pair/test \n * branch            main     -> FETCH_HEAD \n    1de872b..1de872b  main     -> origin/master \n Auto-merging login.js \n Merge made by the 'recursive' strategy. \n login.js | 2 +- \n 1 file changed, 1 insertion(+), 1 deletion(-)",
+            "hint":"pair의 Remote Repository를 내 Local Repository로 받아옵니다.",
+            "answer": [
+                "git pull pair main"
+            ]
+        },
+        {
+            "chapter": "2. 함께 작업",
+            "title": "Push 2",
+            "number": 7,
+            "description": "# 특정 commit 시점으로부터 각기 다른 commit을 만들면, 기본적으로 다음과 같이 자동으로 merge가 됩니다. 이제 내 Remote Repository에도 Local의 내용을 반영합시다.",
+            "terminal_guide": "Enumerating objects: 10, done. \n Counting objects: 100% (10/10), done. \n Compressing objects: 100% (4/4), done. \n Writing objects: 100% (6/6), 582 bytes | 582.00 KiB/s, done. \n Total 6 (delta 2), reused 0 (delta 0) \n remote: Resolving deltas: 100% (2/2), completed with 2 local objects. \n To https://github.com/kimcoding/test \n 5ec312f..5ec312f  main -> main",
+            "hint":"내 Remote Repository에 Push 하세요",
+            "answer": [
+                "git push origin main"
+            ]
+        },
+        {
+            "chapter": "2. 함께 작업",
+            "title": "Staging area: 버전 관리하에 둠 1",
+            "number": 8,
+            "description": "# 나는 로그인 페이지, 페어는 회원가입 페이지를 구현했어요. 내가 작업한 로그인 페이지를 commit 하려 합니다. 먼저 staging area에 작업한 파일을 추가해주세요.",
             "terminal_guide": "",
             "hint":"파일을 staging area로 더한다는 의미의 명령어를 입력해 보세요",
             "answer": [
@@ -198,7 +220,7 @@
         {
             "chapter": "2. 함께 작업",
             "title": "Commit 1",
-            "number": 7,
+            "number": 9,
             "description": "# staging area에 파일이 추가되었습니다. '로그인 페이지 구현' 이라는 메시지로 commit 을 진행해주세요.",
             "terminal_guide": "[main 6b4395c] completed 1 files changed, \n 123 insertions(+) create mode 100644 login.js",
             "hint":"commit을 할 때, -m 옵션을 통해 코멘트를 남길 수 있어요",
@@ -209,8 +231,8 @@
         },
         {
             "chapter": "2. 함께 작업",
-            "title": "Pull",
-            "number": 8,
+            "title": "Pull 2",
+            "number": 10,
             "description": "# 내 커밋을 Remote에 푸시하기 전에 페어가 작업한 회원가입 페이지를 합치려고 합니다. 페어의 코드를 내 컴퓨터로 받아올 수 있을까요?",
             "terminal_guide": "remote: Enumerating objects: 5, done. \n remote: Counting objects: 100% (5/5) , done. \n remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 \n Unpacking objects: 100% (3/3), done. \n From https://github.com/pair/test \n * branch        main     ->   FETCH_HEAD \n *[new branch]   master   ->   pair/main \n Auto-merging login.js \n Merge made by the 'recursive' strategy. \n login.js | 1 + \n 1 file changed, 1 insertion(+)",
             "hint":"pair의 Remote Repository를 내 Local Repository로 받아옵니다.",
@@ -221,7 +243,7 @@
         {
             "chapter": "2. 함께 작업",
             "title": "충돌 해결하기",
-            "number": 9,
+            "number": 11,
             "description": "# 앗.. 하필 페어도 login.js 파일의 동일한 라인을 수정했군요. 페어가 작성한 파일과의 충돌이 발생했습니다. 더 진행하기 전에 이 충돌을 해결해야만 합니다. 파일 내 충돌하는 부분은 다음과 같은 모양을 띄고 있습니다.\n(enter를 눌러 터미널 창에서 확인하세요. 터미널에 나오는 내용은 실제 터미널에는 나오지 않습니다. 여러분이 파일을 어떻게 수정할 지를 보여주는 예시입니다.)",
             "terminal_guide": "<<<< \n console.log('내 변경사항') \n ======= \n console.log('페어의 변경사항') \n >>>> \n 적용할 코드를 취사선택해야 합니다. 페어가 작성한 코드를 적용하려면 충돌 부분을 아래와 같이 만들어주시고, 저장하시면 됩니다. \n console.log('페어의 변경사항')",
             "hint":"enter를 눌러서 확인하세요",
@@ -232,7 +254,7 @@
         {
             "chapter": "2. 함께 작업",
             "title": "Staging area: 버전 관리하에 둠 2",
-            "number": 10,
+            "number": 12,
             "description": "# 충돌이 생긴 부분의 수정을 완료했어요! 다시 Remote Repository에 Push 하기 위해서 수정한 파일을 staging area에 추가해주세요.",
             "terminal_guide": "",
             "hint":"파일을 staging area로 더한다는 의미의 명령어를 입력해 보세요",
@@ -246,7 +268,7 @@
         {
             "chapter": "2. 함께 작업",
             "title": "Commit 2",
-            "number": 11,
+            "number": 13,
             "description": "# 충돌이 해결된 후 staging area에 올라간 파일은 자동으로 commit 메시지가 생성됩니다. 자동 생성된 commit 메시지를 적용하는 명령어를 입력하세요.",
             "terminal_guide": "[main 2e6485b] Merge branch 'main' of https://github.com/kimcoding/test ",
             "hint":"자동으로 생성되는 commit 메시지를 사용하려면 따로 옵션 커맨드를 사용하지 않습니다",
@@ -256,8 +278,8 @@
         },
         {
             "chapter": "2. 함께 작업",
-            "title": "Push 2",
-            "number": 12,
+            "title": "Push 3",
+            "number": 14,
             "description": "# 다음과 같이 merge commit 메시지가 자동으로 생성됩니다. 이제 내 Remote Repository에도 Local Repository의 내용을 반영합시다.",
             "terminal_guide": "Enumerating objects: 1, done. \n Counting objects: 100% (1/1), done. \n Delta compression using up to 1 threads. \n Compressing objects: 100% (1/1), done. \n Writing objects: 100% (1/1), 212.65 KiB | 10.63 MiB/s, done. \n Total 1 (delta 0), reused 0 (delta 0). To https://github.com/kimcoding/test 9ec18c7..2e6485b  main -> main",
             "hint":"내 Remote Repository에 Push 하세요",
@@ -268,7 +290,7 @@
         {
             "chapter": "2. 함께 작업",
             "title": "완료",
-            "number": 13,
+            "number": 15,
             "description": "# enter 버튼을 통해 퀴즈를 완료합니다.",
             "terminal_guide": "",
             "hint":"good job :)",

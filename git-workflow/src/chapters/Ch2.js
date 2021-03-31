@@ -1,5 +1,4 @@
 import React from 'react';
-import githubLogo from '../github.png';
 import Remote from './layouts/Remote';
 import Local from './layouts/Local';
 import ch2_2 from '../imgs/ch2/ch2_2.svg';
@@ -8,16 +7,20 @@ import ch2_4_1 from '../imgs/ch2/ch2_4_1.svg';
 import ch2_4_2 from '../imgs/ch2/ch2_4_2.svg';
 import ch2_5 from '../imgs/ch2/ch2_5.svg';
 import ch2_6 from '../imgs/ch2/ch2_6.svg';
-import ch2_7 from '../imgs/ch2/ch2_7.svg';
+import ch2_7_1 from '../imgs/ch2/ch2_7_1.svg';
+import ch2_7_2 from '../imgs/ch2/ch2_7_2.svg';
 import ch2_8_1 from '../imgs/ch2/ch2_8_1.svg';
 import ch2_8_2 from '../imgs/ch2/ch2_8_2.svg';
-import ch2_9_1 from '../imgs/ch2/ch2_9_1.svg';
-import ch2_9_2 from '../imgs/ch2/ch2_9_2.svg';
-import ch2_10 from '../imgs/ch2/ch2_10.svg';
-import ch2_11 from '../imgs/ch2/ch2_11.svg';
+import ch2_9 from '../imgs/ch2/ch2_9.svg';
+import ch2_10_1 from '../imgs/ch2/ch2_10_1.svg';
+import ch2_10_2 from '../imgs/ch2/ch2_10_2.svg';
+import ch2_11_1 from '../imgs/ch2/ch2_11_1.svg';
+import ch2_11_2 from '../imgs/ch2/ch2_11_2.svg';
 import ch2_12 from '../imgs/ch2/ch2_12.svg';
-import ch2_13_1 from '../imgs/ch2/ch2_13_1.svg';
-import ch2_13_2 from '../imgs/ch2/ch2_13_2.svg';
+import ch2_13 from '../imgs/ch2/ch2_13.svg';
+import ch2_14 from '../imgs/ch2/ch2_14.svg';
+import ch2_15_1 from '../imgs/ch2/ch2_15_1.svg';
+import ch2_15_2 from '../imgs/ch2/ch2_15_2.svg';
 
 
 function Ch2 (props) {
@@ -28,7 +31,6 @@ function Ch2 (props) {
       {
       currentStep === 1
         ? <>
-          <img src={githubLogo} className='github_logo' alt='git' />
           </>
         : currentStep === 2
           ? <>
@@ -38,7 +40,7 @@ function Ch2 (props) {
           </>
           : currentStep === 3
             ? <>
-              <img src={ch2_3} className='svg' alt='git'/>
+              <img src={ch2_3} className='svg show_commit' alt='git'/>
               <Remote remoteStatus='origin-only' effect='show_commit' />
               <Local localStatus='true' />
             </>
@@ -52,57 +54,71 @@ function Ch2 (props) {
               : currentStep === 5
                 ? <>
                   <img src={ch2_5} className='svg' alt='git'/>
-                  <Remote remoteStatus='true' />
+                  <Remote remoteStatus='true' effect='show_commit' />
                   <Local localStatus='true' />
                 </>
                 : currentStep === 6
+                ? <>
+                  <img src={ch2_6} className='svg' alt='git'/>
+                  <Remote remoteStatus='true' />
+                  <Local localStatus='true' />
+                </>
+                : currentStep === 7
+                ? <>
+                  <img src={ch2_7_1} className='svg' alt='git'/>
+                  <img src={ch2_7_2} className='svg show_commit' alt='git'/>
+                  <Remote remoteStatus='true' />
+                  <Local localStatus='true' />
+                </>
+                : currentStep === 8
                   ? <>
-                    <img src={ch2_6} className='svg' alt='git'/>
+                    <img src={ch2_8_1} className='svg' alt='git'/>
+                    <img src={ch2_8_2} className='svg show_commit' alt='git'/>
                     <Remote remoteStatus='true' />
                     <Local localStatus='true' />
                     </>
-                  : currentStep === 7
+                  : currentStep === 9
                     ? <>
-                      <img src={ch2_7} className='svg' alt='git'/>
+                      <img src={ch2_9} className='svg' alt='git'/>
                       <Remote remoteStatus='true' />
                       <Local localStatus='true' />
                       </>
-                    : currentStep === 8
+                    : currentStep === 10
                       ? <>
-                        <img src={ch2_8_1} className='svg' alt='git'/>
-                        <img src={ch2_8_2} className='svg show_commit' alt='git'/>
+                        <img src={ch2_10_1} className='svg' alt='git'/>
+                        <img src={ch2_10_2} className='svg show_commit' alt='git'/>
                         <Remote remoteStatus='true' />
                         <Local localStatus='true' />
                         </>
-                      : currentStep === 9
+                      : currentStep === 11
                         ? <>
-                        <img src={ch2_9_1} className='svg' alt='git'/>
-                        <img src={ch2_9_2} className='svg show_commit' alt='git'/>
+                        <img src={ch2_11_1} className='svg' alt='git'/>
+                        <img src={ch2_11_2} className='svg show_commit' alt='git'/>
                           <Remote remoteStatus='true' />
                           <Local localStatus='true' />
                           </>
-                        : currentStep === 10
+                        : currentStep === 12
                           ? <>
-                          <img src={ch2_10} className='svg' alt='git'/>
+                          <img src={ch2_12} className='svg' alt='git'/>
                             <Remote remoteStatus='true' />
                             <Local localStatus='true' />
                             </>
-                          : currentStep === 11
+                          : currentStep === 13
                             ? <>
-                            <img src={ch2_11} className='svg' alt='git'/>
+                            <img src={ch2_13} className='svg' alt='git'/>
                               <Remote remoteStatus='true' />
                               <Local localStatus='true' />
                               </>
-                            : currentStep === 12
+                            : currentStep === 14
                               ? <>
-                              <img src={ch2_12} className='svg' alt='git'/>
+                              <img src={ch2_14} className='svg' alt='git'/>
                                 <Remote remoteStatus='true' />
                                 <Local localStatus='true' />
                                 </>
-                              : currentStep === 13
+                              : currentStep === 15
                                 ? <>
-                                <img src={ch2_13_1} className='svg' alt='git'/>
-                                <img src={ch2_13_2} className='svg show_commit' alt='git'/>
+                                <img src={ch2_15_1} className='svg' alt='git'/>
+                                <img src={ch2_15_2} className='svg show_commit' alt='git'/>
                                   <Remote remoteStatus='true' />
                                   <Local localStatus='true' />
                                   </>
