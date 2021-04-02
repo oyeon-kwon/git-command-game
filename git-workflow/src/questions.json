@@ -81,7 +81,7 @@
             "chapter": "1. 혼자 작업",
             "title": "commit 2",
             "number": 7,
-            "description": "# 아까와 같이 ‘index.js 수정’ 이라는 메시지로 커밋 기록을 남겨봅시다.",
+            "description": "# 아까와 같이 'index.js 수정' 이라는 메시지로 커밋 기록을 남겨봅시다.",
             "terminal_guide": "[main 6b4395c] completed 1 files changed, \n 123 insertions(+) create mode 100644 index.js",
             "hint":"commit을 할 때, -m 옵션을 통해 코멘트를 남길 수 있어요",
             "answer": [
