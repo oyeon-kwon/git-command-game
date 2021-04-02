@@ -25,7 +25,7 @@ function Ch1 (props) {
       {
         currentStep === 1
           ? <>
-            <Remote effect='show_commit' remoteStatus='origin-only' />
+            
           </>
           : currentStep === 2
             ? <>
