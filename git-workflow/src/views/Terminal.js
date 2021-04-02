@@ -29,7 +29,7 @@ function Terminal (props) {
     } else if (currentStep === questions[props.currentChapter].length) {
       history.push(`/chapter${currentChapter + 1}/1`);
       isCorrect('none');
-      window.location.reload();
+      // window.location.reload();
     } else {
       history.push(`/chapter${currentChapter}/${currentStep + 1}`);
       isCorrect('none');
