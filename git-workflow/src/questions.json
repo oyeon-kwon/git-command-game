@@ -207,7 +207,7 @@
             "chapter": "2. 함께 작업",
             "title": "Staging area: 버전 관리하에 둠 1",
             "number": 8,
-            "description": "# 나는 로그인 페이지, 페어는 회원가입 페이지를 구현했어요. 내가 작업한 로그인 페이지를 commit 하려 합니다. 먼저 staging area에 작업한 파일을 추가해주세요.",
+            "description": "# 내가 footer.html 파일을 수정했습니다. 작업한 사항을 commit 하기 위해 먼저 staging area에 작업한 파일을 추가해주세요.",
             "terminal_guide": "",
             "hint":"파일을 staging area로 더한다는 의미의 명령어를 입력해 보세요",
             "answer": [
@@ -221,19 +221,19 @@
             "chapter": "2. 함께 작업",
             "title": "Commit 1",
             "number": 9,
-            "description": "# staging area에 파일이 추가되었습니다. '로그인 페이지 구현' 이라는 메시지로 commit 을 진행해주세요.",
+            "description": "# staging area에 파일이 추가되었습니다. 'footer 수정' 이라는 메시지로 commit 을 진행해주세요.",
             "terminal_guide": "[main 6b4395c] completed 1 files changed, \n 123 insertions(+) create mode 100644 login.js",
             "hint":"commit을 할 때, -m 옵션을 통해 코멘트를 남길 수 있어요",
             "answer": [
-                "git commit -m '로그인 페이지 구현'",
-                "git commit -m \"로그인 페이지 구현\""
+                "git commit -m 'footer 수정'",
+                "git commit -m \"footer 수정\""
             ]
         },
         {
             "chapter": "2. 함께 작업",
             "title": "Pull 2",
             "number": 10,
-            "description": "# 내 커밋을 Remote에 푸시하기 전에 페어가 작업한 회원가입 페이지를 합치려고 합니다. 페어의 코드를 내 컴퓨터로 받아올 수 있을까요?",
+            "description": "# 페어도 footer.html에 변경한 사항이 있다고 합니다. 내 커밋을 Remote에 푸시하기 전에 페어의 코드를 내 컴퓨터로 받아올 수 있을까요?",
             "terminal_guide": "remote: Enumerating objects: 5, done. \n remote: Counting objects: 100% (5/5) , done. \n remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 \n Unpacking objects: 100% (3/3), done. \n From https://github.com/pair/test \n * branch        main     ->   FETCH_HEAD \n *[new branch]   master   ->   pair/main \n Auto-merging login.js \n Merge made by the 'recursive' strategy. \n login.js | 1 + \n 1 file changed, 1 insertion(+)",
             "hint":"pair의 Remote Repository를 내 Local Repository로 받아옵니다.",
             "answer": [
@@ -244,7 +244,7 @@
             "chapter": "2. 함께 작업",
             "title": "충돌 해결하기",
             "number": 11,
-            "description": "# 앗.. 하필 페어도 login.js 파일의 동일한 라인을 수정했군요. 페어가 작성한 파일과의 충돌이 발생했습니다. 더 진행하기 전에 이 충돌을 해결해야만 합니다. 파일 내 충돌하는 부분은 다음과 같은 모양을 띄고 있습니다.\n(enter를 눌러 터미널 창에서 확인하세요. 터미널에 나오는 내용은 실제 터미널에는 나오지 않습니다. 여러분이 파일을 어떻게 수정할 지를 보여주는 예시입니다.)",
+            "description": "# 앗.. 하필 페어도 footer.html 파일의 동일한 라인을 수정했군요. 페어가 작성한 파일과의 충돌이 발생했습니다. 더 진행하기 전에 이 충돌을 해결해야만 합니다. 파일 내 충돌하는 부분은 다음과 같은 모양을 띄고 있습니다. \n(enter를 눌러 터미널 창에서 확인하세요. 터미널에 나오는 내용은 실제 터미널에는 나오지 않습니다. 여러분이 파일을 어떻게 수정할 지를 보여주는 예시입니다.)",
             "terminal_guide": "<<<< \n console.log('내 변경사항') \n ======= \n console.log('페어의 변경사항') \n >>>> \n 적용할 코드를 취사선택해야 합니다. 페어가 작성한 코드를 적용하려면 충돌 부분을 아래와 같이 만들어주시고, 저장하시면 됩니다. \n console.log('페어의 변경사항')",
             "hint":"enter를 눌러서 확인하세요",
             "answer": [
