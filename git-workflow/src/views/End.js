@@ -4,8 +4,8 @@ import logo from '../logo.png';
 
 function End () {
   const retryHandler = () => {
-    window.location.href = 'http://localhost:3000/';
-    // window.location.href = 'https://codestates.github.io/sw-sprint-git-workflow/';
+    // window.location.href = 'http://localhost:3000/';
+    window.location.href = 'https://codestates.github.io/sw-sprint-git-workflow/';
   };
 
   return (
