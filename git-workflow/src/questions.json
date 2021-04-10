@@ -213,8 +213,8 @@
             "terminal_guide": "",
             "hint":"파일을 staging area로 더한다는 의미의 명령어를 입력해 보세요",
             "answer": [
-                "git add login.js",
-                "git add ./login.js",
+                "git add footer.html",
+                "git add ./footer.html",
                 "git add .",
                 "git add *"
             ]
@@ -261,8 +261,8 @@
             "terminal_guide": "",
             "hint":"파일을 staging area로 더한다는 의미의 명령어를 입력해 보세요",
             "answer": [
-                "git add login.js",
-                "git add ./login.js",
+                "git add footer.html",
+                "git add ./footer.html",
                 "git add .",
                 "git add *"
             ]
