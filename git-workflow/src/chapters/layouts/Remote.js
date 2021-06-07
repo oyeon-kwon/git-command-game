@@ -13,6 +13,13 @@ function Remote (props) {
         );
       case 'origin-only':
         return <Repository title='origin' />;
+      case 'project':
+        return (
+          <>
+            <Repository title='project' />
+            <Repository title='origin' />
+          </>
+        )
     }
   };
   return (

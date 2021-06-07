@@ -67,6 +67,10 @@ hr {
   border-radius: 1rem;
 }
 
+.project {
+  height: 1px;
+}
+
 .staging {
   border: 1px solid #c5caec;
   height: 70px;
